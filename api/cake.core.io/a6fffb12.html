@@ -83,7 +83,7 @@
               
             
               
-              <li><a href="/api-documentation.html">API Documentation</a></li>
+              <li class="active"><a href="/api-documentation.html">API Documentation</a></li>
               
             
           </ul>
@@ -91,14 +91,69 @@
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           
-          <p>
-<div class="container2">
-	<div class="jumbotron">
-		<img src="images\logo-medium.png" style="margin: 0 auto;"/>
-		<p class="lead">Cake (C# Make) is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages.</p>
-		<p><a class="btn btn-lg btn-success" href="https://github.com/cake-build/cake" role="button">Go to GitHub</a></p>
-	</div>
-</div></p>
+          <div class="page-header">
+            <h2>FileExtensions <small>Class</small></h2>
+          </div>
+          
+          <p><ol class="breadcrumb">
+<li>
+<a href="/api-documentation.html">API Documentation</a>
+</li>
+<li>
+<a href="/api/cake.core.io.html">Cake.Core.IO</a>
+</li>
+<li class="active">
+FileExtensions
+</li>
+</ol>
+<div class="alert alert-info">
+
+            Contains extension methods for 
+<a href="/api/cake.core.io/9aa5daa2.html">IFile</a>.
+            
+</div>
+<div class="panel panel-default"><div class="panel-heading"><b>Methods</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open(IFile, FileMode)</td>
+<td>
+            Opens the file using the specified options.
+            
+</td></tr>
+<tr>
+<td>Open(IFile, FileMode, FileAccess)</td>
+<td>
+            Opens the file using the specified options.
+            
+</td></tr>
+<tr>
+<td>OpenRead(IFile)</td>
+<td>
+            Opens the file for reading.
+            
+</td></tr>
+<tr>
+<td>OpenWrite(IFile)</td>
+<td>
+            Opens the file for writing.
+            If the file already exists, it will be overwritten.
+            
+</td></tr>
+<tr>
+<td>ReadLines(IFile, Encoding)</td>
+<td>
+            Enumerates line in file
+            
+</td></tr>
+</tbody>
+</table>
+</div></div></p>
         </div>
 
       </div>

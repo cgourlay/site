@@ -83,7 +83,7 @@
               
             
               
-              <li><a href="/api-documentation.html">API Documentation</a></li>
+              <li class="active"><a href="/api-documentation.html">API Documentation</a></li>
               
             
           </ul>
@@ -91,14 +91,135 @@
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           
-          <p>
-<div class="container2">
-	<div class="jumbotron">
-		<img src="images\logo-medium.png" style="margin: 0 auto;"/>
-		<p class="lead">Cake (C# Make) is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages.</p>
-		<p><a class="btn btn-lg btn-success" href="https://github.com/cake-build/cake" role="button">Go to GitHub</a></p>
-	</div>
-</div></p>
+          <div class="page-header">
+            <h2>ScriptProcessorContext <small>Class</small></h2>
+          </div>
+          
+          <p><ol class="breadcrumb">
+<li>
+<a href="/api-documentation.html">API Documentation</a>
+</li>
+<li>
+<a href="/api/cake.core.scripting.html">Cake.Core.Scripting</a>
+</li>
+<li class="active">
+ScriptProcessorContext
+</li>
+</ol>
+<div class="alert alert-info">
+
+            Acts as a context, keeping track of loaded scripts,
+            references and namespaces to add and script content.
+            
+</div>
+<div class="panel panel-default"><div class="panel-heading"><b>Constructors</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ScriptProcessorContext()</td>
+<td>
+            Initializes a new instance of the 
+<a href="/api/cake.core.scripting/9db760b1.html">ScriptProcessorContext</a> class.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>References</td>
+<td>
+            Gets the script's assembly references 
+            referenced via the 
+<i>
+#r
+</i>
+ directive.
+            
+</td></tr>
+<tr>
+<td>Namespaces</td>
+<td>
+            Gets the script's namespaces imported
+            via the 
+<i>
+using
+</i>
+ statement.
+            
+</td></tr>
+<tr>
+<td>ProcessedScripts</td>
+<td>
+            Gets the scripts that has been processed so far.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Methods</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HasScriptBeenProcessed(String)</td>
+<td>
+            Determines whether the specified script has been processed.
+            
+</td></tr>
+<tr>
+<td>MarkScriptAsProcessed(String)</td>
+<td>
+            Marks the script as processed.
+            
+</td></tr>
+<tr>
+<td>AddReference(String)</td>
+<td>
+            Adds an assembly reference to be loaded later.
+            
+</td></tr>
+<tr>
+<td>AddNamespace(String)</td>
+<td>
+            Adds a namespace to be loaded later.
+            
+</td></tr>
+<tr>
+<td>AddScriptAliasCode(String)</td>
+<td>
+            Adds the code for a script alias.
+            
+</td></tr>
+<tr>
+<td>AppendScriptLine(String)</td>
+<td>
+            Appends a line to the script.
+            
+</td></tr>
+<tr>
+<td>GetScriptCode()</td>
+<td>
+            Gets the script code.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div></p>
         </div>
 
       </div>

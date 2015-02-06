@@ -1,0 +1,256 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Patrik Svensson">
+    <meta name="keywords" content="C#,Build,Cake,Cake Build,Build Automation" />
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Cake Build</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/dist/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/dist/css/styles/monokai_sublime.css">
+    <script src="/dist/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/cake.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Cake Build</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/cake-build/cake">Source Code</a></li>
+            <li><a href="https://github.com/cake-build/cake/releases">Download</a></li>
+            <li><a href="https://www.nuget.org/packages/Cake">NuGet</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">   
+          <ul class="nav nav-sidebar">
+            
+              
+              <li><a href="/introduction.html">Introduction</a></li>
+              
+            
+              
+              <li><a href="/how-does-it-work.html">How does it work?</a></li>
+              
+            
+              
+              <li><a href="/getting-started.html">Getting started</a></li>
+              
+            
+              
+              <li><a href="/contributors.html">Contributors</a></li>
+              
+            
+              
+              <li><a href="/contribution-guidelines.html">Contribution guidelines</a></li>
+              
+            
+              
+              <li><a href="/appveyor-integration.html">AppVeyor Integration</a></li>
+              
+            
+              
+              <li class="active"><a href="/api-documentation.html">API Documentation</a></li>
+              
+            
+          </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
+          <div class="page-header">
+            <h2>Cake.Core <small>Namespace</small></h2>
+          </div>
+          
+          <p><ol class="breadcrumb">
+<li>
+<a href="/api-documentation.html">API Documentation</a>
+</li>
+<li class="active">
+Cake.Core
+</li>
+</ol>
+<div class="panel panel-default"><div class="panel-heading">Classes</div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/api/cake.core/a83c8f86.html">CakeTask</a></td><td>
+            A 
+<a href="/api/cake.core/a83c8f86.html">CakeTask</a> represents a unit of work.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/4c0bd15a.html">ActionTask</a></td><td>
+            A task that executes a specified delegate.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/a1153ba1.html">CakeEngine</a></td><td>
+            The Cake execution engine.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/48b43055.html">CakeException</a></td><td>
+            Represent errors that occur during script execution.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/e235cead.html">CakeReport</a></td><td>
+            Contains information about tasks that were executed in a script.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/059238c7.html">CakeReportEntry</a></td><td>
+            Represents an entry in a 
+<a href="/api/cake.core/e235cead.html">CakeReport</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/27fdfbfb.html">CakeTaskBuilder&lt;T&gt;</a></td><td>
+            Allows configuration to be performed for a registered 
+<a href="/api/cake.core/a83c8f86.html">CakeTask</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/1dc88ee3.html">CakeTaskBuilderExtensions</a></td><td>
+            Contains extension methods for 
+<a href="/api/cake.core/27fdfbfb.html">CakeTaskBuilder&lt;T&gt;</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/d90cdde8.html">ConsoleExtensions</a></td><td>
+            Contains extension methods for 
+<a href="/api/cake.core/80000852.html">IConsole</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/4ae30f02.html">MethodInfoExtensions</a></td><td>
+            Contains extension methods for 
+<a href="https://msdn.microsoft.com/library/System.Reflection.MethodInfo.aspx">System.Reflection.MethodInfo</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/986bb623.html">ProcessArgumentListExtensions</a></td><td>
+            Contains extension methods for 
+<a href="/api/cake.core.io/5ae89168.html">ProcessArgumentBuilder</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/e33ae314.html">ProcessRunnerExtensions</a></td><td>
+            Contains extension methods for 
+<a href="/api/cake.core.io/3d137d9b.html">IProcessRunner</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/39edec73.html">StringExtensions</a></td><td>
+            Contains extension methods for 
+<a href="https://msdn.microsoft.com/library/System.String.aspx">System.String</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/18daaf52.html">TypeExtensions</a></td><td>
+            Contains extension methods for 
+<a href="https://msdn.microsoft.com/library/System.Type.aspx">System.Type</a>.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/1574564d.html">CakeEnvironment</a></td><td>
+            Represents the environment Cake operates in.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div><div class="panel panel-default"><div class="panel-heading">Interfaces</div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/api/cake.core/f005e67e.html">ICakeContext</a></td><td>
+            Represents a context for scripts.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/236df11f.html">ICakeEngine</a></td><td>
+            Represents the Cake engine.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/d15adab0.html">ICakeArguments</a></td><td>
+            Represents arguments passed to script.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/2c181890.html">ICakeReportPrinter</a></td><td>
+            Represents a report printer.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/80000852.html">IConsole</a></td><td>
+            Represents console output.
+            
+</td></tr>
+<tr>
+<td><a href="/api/cake.core/3f06981d.html">ICakeEnvironment</a></td><td>
+            Represents the environment Cake operates in.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div></p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

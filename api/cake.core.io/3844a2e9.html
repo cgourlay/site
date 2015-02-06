@@ -83,7 +83,7 @@
               
             
               
-              <li><a href="/api-documentation.html">API Documentation</a></li>
+              <li class="active"><a href="/api-documentation.html">API Documentation</a></li>
               
             
           </ul>
@@ -91,14 +91,131 @@
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           
-          <p>
-<div class="container2">
-	<div class="jumbotron">
-		<img src="images\logo-medium.png" style="margin: 0 auto;"/>
-		<p class="lead">Cake (C# Make) is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages.</p>
-		<p><a class="btn btn-lg btn-success" href="https://github.com/cake-build/cake" role="button">Go to GitHub</a></p>
-	</div>
-</div></p>
+          <div class="page-header">
+            <h2>FilePathCollection <small>Class</small></h2>
+          </div>
+          
+          <p><ol class="breadcrumb">
+<li>
+<a href="/api-documentation.html">API Documentation</a>
+</li>
+<li>
+<a href="/api/cake.core.io.html">Cake.Core.IO</a>
+</li>
+<li class="active">
+FilePathCollection
+</li>
+</ol>
+<div class="alert alert-info">
+
+            A collection of 
+<a href="/api/cake.core.io/3181b989.html">FilePath</a>.
+            
+</div>
+<div class="panel panel-default"><div class="panel-heading"><b>Constructors</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FilePathCollection(PathComparer)</td>
+<td>
+            Initializes a new instance of the 
+<a href="/api/cake.core.io/3844a2e9.html">FilePathCollection</a> class.
+            
+</td></tr>
+<tr>
+<td>FilePathCollection(IEnumerable&lt;FilePath&gt;, PathComparer)</td>
+<td>
+            Initializes a new instance of the 
+<a href="/api/cake.core.io/3844a2e9.html">FilePathCollection</a> class.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>
+            Gets the number of files in the collection.
+            
+</td></tr>
+<tr>
+<td>Comparer</td>
+<td></td></tr>
+</tbody>
+</table>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Methods</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add(FilePath)</td>
+<td>
+            Adds the specified path to the collection.
+            
+</td></tr>
+<tr>
+<td>Add(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Adds the specified paths to the collection.
+            
+</td></tr>
+<tr>
+<td>Remove(FilePath)</td>
+<td>
+            Removes the specified path from the collection.
+            
+</td></tr>
+<tr>
+<td>Remove(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Removes the specified paths from the collection.
+            
+</td></tr>
+<tr>
+<td>op_Addition(FilePathCollection, FilePath)</td>
+<td>Adds a path to the collection.
+</td></tr>
+<tr>
+<td>op_Addition(FilePathCollection, IEnumerable&lt;FilePath&gt;)</td>
+<td>Adds multiple paths to the collection.
+</td></tr>
+<tr>
+<td>op_Subtraction(FilePathCollection, FilePath)</td>
+<td>
+            Removes a path from the collection.
+            
+</td></tr>
+<tr>
+<td>op_Subtraction(FilePathCollection, IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Removes multiple paths from the collection.
+            
+</td></tr>
+<tr>
+<td>GetEnumerator()</td>
+<td>
+            Returns an enumerator that iterates through the collection.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div></p>
         </div>
 
       </div>
