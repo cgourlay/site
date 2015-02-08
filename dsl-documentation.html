@@ -1,0 +1,1329 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Patrik Svensson">
+    <meta name="keywords" content="C#,Build,Cake,Cake Build,Build Automation" />
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Cake Build</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/dist/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/dist/css/styles/monokai_sublime.css">
+    <script src="/dist/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/cake.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Cake Build</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/cake-build/cake">Source Code</a></li>
+            <li><a href="https://github.com/cake-build/cake/releases">Download</a></li>
+            <li><a href="https://www.nuget.org/packages/Cake">NuGet</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">   
+          <ul class="nav nav-sidebar">
+            
+              
+              <li><a href="/introduction.html">Introduction</a></li>
+              
+            
+              
+              <li><a href="/how-does-it-work.html">How does it work?</a></li>
+              
+            
+              
+              <li><a href="/getting-started.html">Getting started</a></li>
+              
+            
+              
+              <li><a href="/contributors.html">Contributors</a></li>
+              
+            
+              
+              <li><a href="/contribution-guidelines.html">Contribution guidelines</a></li>
+              
+            
+              
+              <li><a href="/appveyor-integration.html">AppVeyor Integration</a></li>
+              
+            
+              
+              <li class="active"><a href="/dsl-documentation.html">DSL Documentation</a></li>
+              
+            
+              
+              <li><a href="/api-documentation.html">API Documentation</a></li>
+              
+            
+          </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
+          <div class="page-header">
+            <h2>DSL Documentation</h2>
+          </div>
+          
+          <p><div class="alert alert-info">
+<p>Here you can find information about Cake alias methods and properties.</p>
+<p><b>Click on a section heading to read more.</b></p>
+</div>
+<div class="panel-group" id="accordion">
+<div class="panel panel-default" id="panelArguments">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseArguments" href="#collapseArguments" class="collapsed">Arguments</a>
+</h4>
+</div>
+<div id="collapseArguments" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+HasArgument(String)</td>
+<td>
+            Determines whether or not the specified argument exist.
+            
+</td></tr>
+<tr>
+<td>
+Argument&lt;T&gt;(String)</td>
+<td>
+            Gets an argument and throws if the argument is missing.
+            
+</td></tr>
+<tr>
+<td>
+Argument&lt;T&gt;(String, T)</td>
+<td>
+            Gets an argument and returns the provided 
+ if the argument is missing.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelAssemblyInfo">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseAssemblyInfo" href="#collapseAssemblyInfo" class="collapsed">Assembly Info</a>
+</h4>
+</div>
+<div id="collapseAssemblyInfo" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+CreateAssemblyInfo(FilePath, AssemblyInfoSettings)</td>
+<td>
+            Creates an assembly information file.
+            
+</td></tr>
+<tr>
+<td>
+ParseAssemblyInfo(FilePath)</td>
+<td>
+            Parses an existing assembly information file.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelCompression">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseCompression" href="#collapseCompression" class="collapsed">Compression</a>
+</h4>
+</div>
+<div id="collapseCompression" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Zip(DirectoryPath, FilePath)</td>
+<td>
+            Zips the specified directory.
+            
+</td></tr>
+<tr>
+<td>
+Zip(DirectoryPath, FilePath, String)</td>
+<td>
+            Zips the files matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+Zip(DirectoryPath, FilePath, IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Zips the specified files.
+            
+</td></tr>
+<tr>
+<td>
+Zip(DirectoryPath, FilePath, IEnumerable&lt;String&gt;)</td>
+<td>
+            Zips the specified files.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelDirectoryOperations">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseDirectoryOperations" href="#collapseDirectoryOperations" class="collapsed">Directory Operations</a>
+</h4>
+</div>
+<div id="collapseDirectoryOperations" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+DeleteDirectories(IEnumerable&lt;DirectoryPath&gt;, Boolean)</td>
+<td>
+            Deletes the specified directories.
+            
+</td></tr>
+<tr>
+<td>
+DeleteDirectories(IEnumerable&lt;String&gt;, Boolean)</td>
+<td>
+            Deletes the specified directories.
+            
+</td></tr>
+<tr>
+<td>
+DeleteDirectory(DirectoryPath, Boolean)</td>
+<td>
+            Deletes the specified directory.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+CleanDirectories(String)</td>
+<td>
+            Cleans the directories matching the specified pattern.
+            Cleaning the directory will remove all it's content but not the directory iteself.
+            
+</td></tr>
+<tr>
+<td>
+CleanDirectories(IEnumerable&lt;DirectoryPath&gt;)</td>
+<td>
+            Cleans the specified directories.
+            Cleaning a directory will remove all it's content but not the directory iteself.
+            
+</td></tr>
+<tr>
+<td>
+CleanDirectories(IEnumerable&lt;String&gt;)</td>
+<td>
+            Cleans the specified directories.
+            Cleaning a directory will remove all it's content but not the directory iteself.
+            
+</td></tr>
+<tr>
+<td>
+CleanDirectory(DirectoryPath)</td>
+<td>
+            Cleans the specified directory.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+CreateDirectory(DirectoryPath)</td>
+<td>
+            Creates the specified directory.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+CopyDirectory(DirectoryPath, DirectoryPath)</td>
+<td>
+            Copies a directory to the specified location.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelEnvironment">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseEnvironment" href="#collapseEnvironment" class="collapsed">Environment</a>
+</h4>
+</div>
+<div id="collapseEnvironment" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+EnvironmentVariable(String)</td>
+<td>
+            Retrieves the value of the environment variable or 
+<code>
+null
+</code>
+ if the environment variable do not exist.
+            
+</td></tr>
+<tr>
+<td>
+HasEnvironmentVariable(String)</td>
+<td>
+            Checks for the existance of a value for a given enviroment variable.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelFileOperations">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseFileOperations" href="#collapseFileOperations" class="collapsed">File Operations</a>
+</h4>
+</div>
+<div id="collapseFileOperations" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+CopyFileToDirectory(FilePath, DirectoryPath)</td>
+<td>
+            Copies an existing file to a new location.
+            
+</td></tr>
+<tr>
+<td>
+CopyFile(FilePath, FilePath)</td>
+<td>
+            Copies an existing file to a new file, providing the option to specify a new file name.
+            
+</td></tr>
+<tr>
+<td>
+CopyFiles(String, DirectoryPath)</td>
+<td>
+            Copies all files matching the provided pattern to a new location.
+            
+</td></tr>
+<tr>
+<td>
+CopyFiles(IEnumerable&lt;FilePath&gt;, DirectoryPath)</td>
+<td>
+            Copies existing files to a new location.
+            
+</td></tr>
+<tr>
+<td>
+CopyFiles(IEnumerable&lt;String&gt;, DirectoryPath)</td>
+<td>
+            Copies existing files to a new location.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+MoveFileToDirectory(FilePath, DirectoryPath)</td>
+<td>
+            Moves an existing file to a new location.
+            
+</td></tr>
+<tr>
+<td>
+MoveFiles(String, DirectoryPath)</td>
+<td>
+            Moves existing files matching the specified pattern to a new location.
+            
+</td></tr>
+<tr>
+<td>
+MoveFiles(IEnumerable&lt;FilePath&gt;, DirectoryPath)</td>
+<td>
+            Moves existing files to a new location.
+            
+</td></tr>
+<tr>
+<td>
+MoveFile(FilePath, FilePath)</td>
+<td>
+            Moves an existing file to a new location, providing the option to specify a new file name.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+DeleteFiles(String)</td>
+<td>
+            Deletes the specified files.
+            
+</td></tr>
+<tr>
+<td>
+DeleteFiles(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Deletes the specified files.
+            
+</td></tr>
+<tr>
+<td>
+DeleteFile(FilePath)</td>
+<td>
+            Deletes the specified file.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelGlobbing">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseGlobbing" href="#collapseGlobbing" class="collapsed">Globbing</a>
+</h4>
+</div>
+<div id="collapseGlobbing" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+GetFiles(String)</td>
+<td>
+            Gets all files matching the specified pattern.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+GetDirectories(String)</td>
+<td>
+            Gets all directory matching the specified pattern.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelILMerge">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseILMerge" href="#collapseILMerge" class="collapsed">ILMerge</a>
+</h4>
+</div>
+<div id="collapseILMerge" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+ILMerge(FilePath, FilePath, IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Merges the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+ILMerge(FilePath, FilePath, IEnumerable&lt;FilePath&gt;, ILMergeSettings)</td>
+<td>
+            Merges the specified assemblies.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelLogging">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseLogging" href="#collapseLogging" class="collapsed">Logging</a>
+</h4>
+</div>
+<div id="collapseLogging" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Error(String, Object[])</td>
+<td>
+            Writes an error message to the log using the specified format information.
+            
+</td></tr>
+<tr>
+<td>
+Warning(String, Object[])</td>
+<td>
+            Writes a warning message to the log using the specified format information.
+            
+</td></tr>
+<tr>
+<td>
+Information(String, Object[])</td>
+<td>
+            Writes an informational message to the log using the specified format information.
+            
+</td></tr>
+<tr>
+<td>
+Verbose(String, Object[])</td>
+<td>
+            Writes a verbose message to the log using the specified format information.
+            
+</td></tr>
+<tr>
+<td>
+Debug(String, Object[])</td>
+<td>
+            Writes a debug message to the log using the specified format information.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelMSBuild">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseMSBuild" href="#collapseMSBuild" class="collapsed">MSBuild</a>
+</h4>
+</div>
+<div id="collapseMSBuild" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+MSBuild(FilePath)</td>
+<td>
+            Builds the specified solution using MSBuild.
+            
+</td></tr>
+<tr>
+<td>
+MSBuild(FilePath, Action&lt;MSBuildSettings&gt;)</td>
+<td>
+            Builds the specified solution using MSBuild.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelMSBuildResource">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseMSBuildResource" href="#collapseMSBuildResource" class="collapsed">MSBuild Resource</a>
+</h4>
+</div>
+<div id="collapseMSBuildResource" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+ParseProject(FilePath)</td>
+<td>
+            Parses project information from project file
+            
+</td></tr>
+<tr>
+<td>
+ParseSolution(FilePath)</td>
+<td>
+            Parses project information from solution file
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelMSTest">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseMSTest" href="#collapseMSTest" class="collapsed">MSTest</a>
+</h4>
+</div>
+<div id="collapseMSTest" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+MSTest(String)</td>
+<td>
+            Runs all MSTest unit tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+MSTest(String, MSTestSettings)</td>
+<td>
+            Runs all MSTest unit tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+MSTest(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Runs all MSTest unit tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+MSTest(IEnumerable&lt;FilePath&gt;, MSTestSettings)</td>
+<td>
+            Runs all MSTest unit tests in the specified assemblies.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelNuGet">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseNuGet" href="#collapseNuGet" class="collapsed">NuGet</a>
+</h4>
+</div>
+<div id="collapseNuGet" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NuGetPack(FilePath, NuGetPackSettings)</td>
+<td>
+            Creates a NuGet package using the specified Nuspec file.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NuGetRestore(FilePath)</td>
+<td>
+            Restores NuGet packages for the specified target.
+            
+</td></tr>
+<tr>
+<td>
+NuGetRestore(FilePath, NuGetRestoreSettings)</td>
+<td>
+            Restores NuGet packages using the specified settings.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NuGetPush(FilePath, NuGetPushSettings)</td>
+<td>
+            Pushes a NuGet package to a NuGet server and publishes it.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NuGetAddSource(String, String)</td>
+<td>
+            Adds NuGet package source using the specified name &source to global user config
+            
+</td></tr>
+<tr>
+<td>
+NuGetAddSource(String, String, NuGetSourcesSettings)</td>
+<td>
+            Adds NuGet package source using the specified name, source & settings to global user config
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NuGetRemoveSource(String, String)</td>
+<td>
+            Removes NuGet package source using the specified name & source from global user config
+            
+</td></tr>
+<tr>
+<td>
+NuGetRemoveSource(String, String, NuGetSourcesSettings)</td>
+<td>
+            Removes NuGet package source using the specified name, source & settings from global user config
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NuGetHasSource(String)</td>
+<td>
+            Checks if NuGet package source exists in global user config using the specified source
+            
+</td></tr>
+<tr>
+<td>
+NuGetHasSource(String, NuGetSourcesSettings)</td>
+<td>
+            Checks if NuGet package source exists in global user config using the specified source & settings
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelNUnit">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseNUnit" href="#collapseNUnit" class="collapsed">NUnit</a>
+</h4>
+</div>
+<div id="collapseNUnit" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+NUnit(String)</td>
+<td>
+            Runs all NUnit unit tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+NUnit(String, NUnitSettings)</td>
+<td>
+            Runs all NUnit unit tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+NUnit(IEnumerable&lt;String&gt;)</td>
+<td>
+            Runs all NUnit unit tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+NUnit(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Runs all NUnit unit tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+NUnit(IEnumerable&lt;String&gt;, NUnitSettings)</td>
+<td>
+            Runs all NUnit unit tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+NUnit(IEnumerable&lt;FilePath&gt;, NUnitSettings)</td>
+<td>
+            Runs all NUnit unit tests in the specified assemblies.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelProcess">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseProcess" href="#collapseProcess" class="collapsed">Process</a>
+</h4>
+</div>
+<div id="collapseProcess" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+StartProcess(FilePath)</td>
+<td>
+            Starts the process resource that is specified by the filename.
+            
+</td></tr>
+<tr>
+<td>
+StartProcess(FilePath, ProcessSettings)</td>
+<td>
+            Starts the process resource that is specified by the filename and settings.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelReleaseNotes">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseReleaseNotes" href="#collapseReleaseNotes" class="collapsed">Release Notes</a>
+</h4>
+</div>
+<div id="collapseReleaseNotes" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+ParseAllReleaseNotes(FilePath)</td>
+<td>
+            Parses all release notes.
+            
+</td></tr>
+<tr>
+<td>
+ParseReleaseNotes(FilePath)</td>
+<td>
+            Parses the latest release notes.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelSigning">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseSigning" href="#collapseSigning" class="collapsed">Signing</a>
+</h4>
+</div>
+<div id="collapseSigning" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Sign(String, SignToolSignSettings)</td>
+<td>
+            Signs the specified assembly
+            
+</td></tr>
+<tr>
+<td>
+Sign(FilePath, SignToolSignSettings)</td>
+<td>
+            Signs the specified assembly
+            
+</td></tr>
+<tr>
+<td>
+Sign(IEnumerable&lt;String&gt;, SignToolSignSettings)</td>
+<td>
+            Signs the specified assemblies
+            
+</td></tr>
+<tr>
+<td>
+Sign(IEnumerable&lt;FilePath&gt;, SignToolSignSettings)</td>
+<td>
+            Signs the specified assemblies
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelText">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseText" href="#collapseText" class="collapsed">Text</a>
+</h4>
+</div>
+<div id="collapseText" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+TransformText(String)</td>
+<td>
+            Creates a text transformation from the provided template.
+            
+</td></tr>
+<tr>
+<td>
+TransformTextFile(FilePath)</td>
+<td>
+            Creates a text transformation from the provided template on disc.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelWiX">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapseWiX" href="#collapseWiX" class="collapsed">WiX</a>
+</h4>
+</div>
+<div id="collapseWiX" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+WiXCandle(String, CandleSettings)</td>
+<td>
+            Compiles all .wxs sources matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+WiXCandle(IEnumerable&lt;FilePath&gt;, CandleSettings)</td>
+<td>
+            Compiles all .wxs sources in the provided source files.
+            
+</td></tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+WiXLight(String, LightSettings)</td>
+<td>
+            Links all .wixobj files matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+WiXLight(IEnumerable&lt;FilePath&gt;, LightSettings)</td>
+<td>
+            Links all .wixobj files in the provided object files.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelxUnit">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapsexUnit" href="#collapsexUnit" class="collapsed">xUnit</a>
+</h4>
+</div>
+<div id="collapsexUnit" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+XUnit(String)</td>
+<td>
+            Runs all xUnit.net tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+XUnit(String, XUnitSettings)</td>
+<td>
+            Runs all xUnit.net tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+XUnit(IEnumerable&lt;String&gt;)</td>
+<td>
+            Runs all xUnit.net tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+XUnit(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Runs all xUnit.net tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+XUnit(IEnumerable&lt;String&gt;, XUnitSettings)</td>
+<td>
+            Runs all xUnit.net tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+XUnit(IEnumerable&lt;FilePath&gt;, XUnitSettings)</td>
+<td>
+            Runs all xUnit.net tests in the specified assemblies.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panelxUnitv2">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-target="#collapsexUnitv2" href="#collapsexUnitv2" class="collapsed">xUnit v2</a>
+</h4>
+</div>
+<div id="collapsexUnitv2" class="panel-collapse collapse">
+<div class="panel-body">
+<table class="table">
+<thead>
+<tr>
+<th class="col-md-4">Name</th>
+<th class="col-md-8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+XUnit2(String)</td>
+<td>
+            Runs all xUnit.net v2 tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+XUnit2(String, XUnit2Settings)</td>
+<td>
+            Runs all xUnit.net v2 tests in the assemblies matching the specified pattern.
+            
+</td></tr>
+<tr>
+<td>
+XUnit2(IEnumerable&lt;String&gt;)</td>
+<td>
+            Runs all xUnit.net v2 tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+XUnit2(IEnumerable&lt;FilePath&gt;)</td>
+<td>
+            Runs all xUnit.net tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+XUnit2(IEnumerable&lt;String&gt;, XUnit2Settings)</td>
+<td>
+            Runs all xUnit.net v2 tests in the specified assemblies.
+            
+</td></tr>
+<tr>
+<td>
+XUnit2(IEnumerable&lt;FilePath&gt;, XUnit2Settings)</td>
+<td>
+            Runs all xUnit.net v2 tests in the specified assemblies.
+            
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
