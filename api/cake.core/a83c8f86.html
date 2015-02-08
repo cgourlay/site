@@ -108,7 +108,8 @@ CakeTask
 </ol>
 <ul>
 <li>
-<a href="https://msdn.microsoft.com/library/System.Object.aspx">System.Object</a></li>
+System.Object
+</li>
 <ul>
 <li>
 CakeTask
@@ -124,51 +125,51 @@ CakeTask
 <div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
 <thead>
 <tr>
-<th class="col-md-3">Name</th>
+<th class="col-md-1">Name</th>
 <th class="col-md-2">Type</th>
-<th class="col-md-7">Description</th>
+<th class="col-md-9">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Name</td>
-<td><a href="https://msdn.microsoft.com/library/System.String.aspx">System.String</a></td><td>
+<td>String</td><td>
             Gets the name of the task.
             
 </td></tr>
 <tr>
 <td>Description</td>
-<td><a href="https://msdn.microsoft.com/library/System.String.aspx">System.String</a></td><td>
+<td>String</td><td>
             Gets or sets the description of the task.
             
 </td></tr>
 <tr>
 <td>Dependencies</td>
-<td><a href="https://msdn.microsoft.com/library/System.Collections.Generic.IReadOnlyList`1&lt;System.String&gt;.aspx">System.Collections.Generic.IReadOnlyList`1&lt;System.String&gt;</a></td><td>
+<td>IReadOnlyList&lt;String&gt;</td><td>
             Gets the task's dependencies.
             
 </td></tr>
 <tr>
 <td>Criterias</td>
-<td><a href="https://msdn.microsoft.com/library/System.Collections.Generic.IReadOnlyList`1&lt;System.Func`1&lt;System.Boolean&gt;&gt;.aspx">System.Collections.Generic.IReadOnlyList`1&lt;System.Func`1&lt;System.Boolean&gt;&gt;</a></td><td>
+<td>IReadOnlyList&lt;Func&lt;Boolean&gt;&gt;</td><td>
             Gets the task's criterias.
             
 </td></tr>
 <tr>
 <td>ErrorHandler</td>
-<td><a href="https://msdn.microsoft.com/library/System.Action`1&lt;System.Exception&gt;.aspx">System.Action`1&lt;System.Exception&gt;</a></td><td>
+<td>Action&lt;Exception&gt;</td><td>
             Gets the error handler.
             
 </td></tr>
 <tr>
 <td>ErrorReporter</td>
-<td><a href="https://msdn.microsoft.com/library/System.Action`1&lt;System.Exception&gt;.aspx">System.Action`1&lt;System.Exception&gt;</a></td><td>
+<td>Action&lt;Exception&gt;</td><td>
             Gets the error reporter.
             
 </td></tr>
 <tr>
 <td>FinallyHandler</td>
-<td><a href="https://msdn.microsoft.com/library/System.Action.aspx">System.Action</a></td><td>
+<td>Action</td><td>
             Gets the finally handler.
             
 </td></tr>
@@ -183,26 +184,30 @@ CakeTask
 </thead>
 <tbody>
 <tr>
-<td>AddDependency(String)</td>
+<td>
+AddDependency(String)</td>
 <td>
             Adds a dependency to the task.
             
 </td></tr>
 <tr>
-<td>AddCriteria(Func&lt;Boolean&gt;)</td>
+<td>
+AddCriteria(Func&lt;Boolean&gt;)</td>
 <td>
             Adds a criteria to the task that is invoked when the task is invoked.
             
 </td></tr>
 <tr>
-<td>SetErrorHandler(Action&lt;Exception&gt;)</td>
+<td>
+SetErrorHandler(Action&lt;Exception&gt;)</td>
 <td>
             Sets the error handler for the task.
             The error handler is invoked when an exception is thrown from the task.
             
 </td></tr>
 <tr>
-<td>SetErrorReporter(Action&lt;Exception&gt;)</td>
+<td>
+SetErrorReporter(Action&lt;Exception&gt;)</td>
 <td>
             Sets the error reporter for the task.
             The error reporter is invoked when an exception is thrown from the task.
@@ -210,14 +215,16 @@ CakeTask
             
 </td></tr>
 <tr>
-<td>SetFinallyHandler(Action)</td>
+<td>
+SetFinallyHandler(Action)</td>
 <td>
             Sets the finally handler for the task.
             The finally handler is always invoked when a task have finished running.
             
 </td></tr>
 <tr>
-<td>Execute(ICakeContext)</td>
+<td>
+Execute(ICakeContext)</td>
 <td>
             Executes the task using the specified context.
             

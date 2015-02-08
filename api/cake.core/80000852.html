@@ -114,21 +114,21 @@ IConsole
 <div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
 <thead>
 <tr>
-<th class="col-md-3">Name</th>
+<th class="col-md-1">Name</th>
 <th class="col-md-2">Type</th>
-<th class="col-md-7">Description</th>
+<th class="col-md-9">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ForegroundColor</td>
-<td><a href="https://msdn.microsoft.com/library/System.ConsoleColor.aspx">System.ConsoleColor</a></td><td>
+<td>ConsoleColor</td><td>
             Gets or sets the foreground color.
             
 </td></tr>
 <tr>
 <td>BackgroundColor</td>
-<td><a href="https://msdn.microsoft.com/library/System.ConsoleColor.aspx">System.ConsoleColor</a></td><td>
+<td>ConsoleColor</td><td>
             Gets or sets the background color.
             
 </td></tr>
@@ -143,14 +143,16 @@ IConsole
 </thead>
 <tbody>
 <tr>
-<td>Write(String, Object[])</td>
+<td>
+Write(String, Object[])</td>
 <td>
             Writes the text representation of the specified array of objects to the 
             console output using the specified format information.
             
 </td></tr>
 <tr>
-<td>WriteLine(String, Object[])</td>
+<td>
+WriteLine(String, Object[])</td>
 <td>
             Writes the text representation of the specified array of objects, followed
             by the current line terminator, to the console output using the specified
@@ -158,7 +160,8 @@ IConsole
             
 </td></tr>
 <tr>
-<td>ResetColor()</td>
+<td>
+ResetColor()</td>
 <td>
             Sets the foreground and background console colors to their defaults.
             

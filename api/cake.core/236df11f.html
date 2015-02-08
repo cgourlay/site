@@ -114,15 +114,15 @@ ICakeEngine
 <div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
 <thead>
 <tr>
-<th class="col-md-3">Name</th>
+<th class="col-md-1">Name</th>
 <th class="col-md-2">Type</th>
-<th class="col-md-7">Description</th>
+<th class="col-md-9">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Tasks</td>
-<td><a href="https://msdn.microsoft.com/library/System.Collections.Generic.IReadOnlyList`1&lt;Cake.Core.CakeTask&gt;.aspx">System.Collections.Generic.IReadOnlyList`1&lt;Cake.Core.CakeTask&gt;</a></td><td>
+<td>IReadOnlyList&lt;<a href="/api/cake.core/a83c8f86.html">CakeTask</a>&gt;</td><td>
             Gets all registered tasks.
             
 </td></tr>
@@ -137,27 +137,31 @@ ICakeEngine
 </thead>
 <tbody>
 <tr>
-<td>Task(String)</td>
+<td>
+Task(String)</td>
 <td>
             Registers a new task.
             
 </td></tr>
 <tr>
-<td>Setup(Action)</td>
+<td>
+Setup(Action)</td>
 <td>
             Allows registration of an action that's executed before any tasks are run.
             If setup fails, no tasks will be executed but teardown will be performed.
             
 </td></tr>
 <tr>
-<td>Teardown(Action)</td>
+<td>
+Teardown(Action)</td>
 <td>
             Allows registration of an action that's executed after all other tasks have been run.
             If a setup action or a task fails with or without recovery, the specified teardown action will still be executed.
             
 </td></tr>
 <tr>
-<td>RunTarget(String)</td>
+<td>
+RunTarget(String)</td>
 <td>
             Runs the specified target.
             

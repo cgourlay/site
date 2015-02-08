@@ -108,7 +108,8 @@ MSBuildSettings
 </ol>
 <ul>
 <li>
-<a href="https://msdn.microsoft.com/library/System.Object.aspx">System.Object</a></li>
+System.Object
+</li>
 <ul>
 <li>
 MSBuildSettings
@@ -130,7 +131,8 @@ MSBuildSettings
 </thead>
 <tbody>
 <tr>
-<td>MSBuildSettings(FilePath)</td>
+<td>
+MSBuildSettings(FilePath)</td>
 <td>
             Initializes a new instance of the 
 <a href="/api/cake.common.tools.msbuild/04799b3e.html">MSBuildSettings</a> class.
@@ -141,9 +143,9 @@ MSBuildSettings
 </div></div><div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
 <thead>
 <tr>
-<th class="col-md-3">Name</th>
+<th class="col-md-1">Name</th>
 <th class="col-md-2">Type</th>
-<th class="col-md-7">Description</th>
+<th class="col-md-9">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -155,13 +157,13 @@ MSBuildSettings
 </td></tr>
 <tr>
 <td>Targets</td>
-<td><a href="https://msdn.microsoft.com/library/System.Collections.Generic.ISet`1&lt;System.String&gt;.aspx">System.Collections.Generic.ISet`1&lt;System.String&gt;</a></td><td>
+<td>ISet&lt;String&gt;</td><td>
             Gets the targets.
             
 </td></tr>
 <tr>
 <td>Properties</td>
-<td><a href="https://msdn.microsoft.com/library/System.Collections.Generic.IDictionary`2&lt;System.String,System.Collections.Generic.IList`1&lt;System.String&gt;&gt;.aspx">System.Collections.Generic.IDictionary`2&lt;System.String,System.Collections.Generic.IList`1&lt;System.String&gt;&gt;</a></td><td>
+<td>IDictionary&lt;String, IList&lt;String&gt;&gt;</td><td>
             Gets the properties.
             
 </td></tr>
@@ -179,19 +181,19 @@ MSBuildSettings
 </td></tr>
 <tr>
 <td>Configuration</td>
-<td><a href="https://msdn.microsoft.com/library/System.String.aspx">System.String</a></td><td>
+<td>String</td><td>
             Gets or sets the configuration.
             
 </td></tr>
 <tr>
 <td>MaxCpuCount</td>
-<td><a href="https://msdn.microsoft.com/library/System.Int32.aspx">System.Int32</a></td><td>
+<td>Int32</td><td>
             Gets or sets the maximum CPU count.
             
 </td></tr>
 <tr>
 <td>NodeReuse</td>
-<td><a href="https://msdn.microsoft.com/library/System.Nullable`1&lt;System.Boolean&gt;.aspx">System.Nullable`1&lt;System.Boolean&gt;</a></td><td>
+<td>Nullable&lt;Boolean&gt;</td><td>
             Gets or sets whether or not node reuse is used.
             When you’re doing multiple builds in a row, this helps reduce your total build time, 
             by avoiding the start up costs of each MSBuild child node.

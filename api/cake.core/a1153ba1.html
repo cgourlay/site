@@ -108,7 +108,8 @@ CakeEngine
 </ol>
 <ul>
 <li>
-<a href="https://msdn.microsoft.com/library/System.Object.aspx">System.Object</a></li>
+System.Object
+</li>
 <ul>
 <li>
 CakeEngine
@@ -129,7 +130,8 @@ CakeEngine
 </thead>
 <tbody>
 <tr>
-<td>CakeEngine(IFileSystem, ICakeEnvironment, ICakeLog, ICakeArguments, IGlobber, IProcessRunner, IEnumerable&lt;IToolResolver&gt;)</td>
+<td>
+CakeEngine(IFileSystem, ICakeEnvironment, ICakeLog, ICakeArguments, IGlobber, IProcessRunner, IEnumerable&lt;IToolResolver&gt;)</td>
 <td>
             Initializes a new instance of the 
 <a href="/api/cake.core/a1153ba1.html">CakeEngine</a> class.
@@ -140,9 +142,9 @@ CakeEngine
 </div></div><div class="panel panel-default"><div class="panel-heading"><b>Properties</b></div><div class="panel-body"><table class="table">
 <thead>
 <tr>
-<th class="col-md-3">Name</th>
+<th class="col-md-1">Name</th>
 <th class="col-md-2">Type</th>
-<th class="col-md-7">Description</th>
+<th class="col-md-9">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -160,7 +162,7 @@ CakeEngine
 </td></tr>
 <tr>
 <td>Tasks</td>
-<td><a href="https://msdn.microsoft.com/library/System.Collections.Generic.IReadOnlyList`1&lt;Cake.Core.CakeTask&gt;.aspx">System.Collections.Generic.IReadOnlyList`1&lt;Cake.Core.CakeTask&gt;</a></td><td>
+<td>IReadOnlyList&lt;<a href="/api/cake.core/a83c8f86.html">CakeTask</a>&gt;</td><td>
             Gets all registered tasks.
             
 </td></tr>
@@ -199,34 +201,39 @@ CakeEngine
 </thead>
 <tbody>
 <tr>
-<td>GetToolResolver(String)</td>
+<td>
+GetToolResolver(String)</td>
 <td>
             Gets resolver by tool name
             
 </td></tr>
 <tr>
-<td>Task(String)</td>
+<td>
+Task(String)</td>
 <td>
             Creates and registers a new 
 <a href="/api/cake.core/4c0bd15a.html">ActionTask</a>.
             
 </td></tr>
 <tr>
-<td>Setup(Action)</td>
+<td>
+Setup(Action)</td>
 <td>
             Allows registration of an action that's executed before any tasks are run.
             If setup fails, no tasks will be executed but teardown will be performed.
             
 </td></tr>
 <tr>
-<td>Teardown(Action)</td>
+<td>
+Teardown(Action)</td>
 <td>
             Allows registration of an action that's executed after all other tasks have been run.
             If a setup action or a task fails with or without recovery, the specified teardown action will still be executed.
             
 </td></tr>
 <tr>
-<td>RunTarget(String)</td>
+<td>
+RunTarget(String)</td>
 <td>
             Runs the specified target.
             
