@@ -143,7 +143,21 @@ The settings.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">Task("Sign")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore")
+    .IsDependentOn("Build")
+    .Does(() =>
+{
+    var file = new FilePath("Core.dll");
+    Sign(files, new SignToolSignSettings {
+            TimeStampUri = new Uri("http://timestamp.digicert.com"),
+            CertPath = "digicert.pfx",
+            Password = "TopSecret"
+    });
+});
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

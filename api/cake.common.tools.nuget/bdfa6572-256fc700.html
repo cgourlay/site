@@ -143,7 +143,15 @@ The settings.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var solutions = GetFiles("./**/*.sln");
+// Restore all NuGet packages.
+foreach(var solution in solutions)
+{
+    Information("Restoring {0}", solution);
+    NuGetRestore(solution, new NuGetRestoreSettings { NoCache = true });
+}
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

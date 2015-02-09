@@ -143,7 +143,16 @@ The settings.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">// Get the path to the package.
+var package = "./nuget/SlackPRTGCommander.0.0.1.nupkg";
+            
+// Push the package.
+NuGetPush(package, new NuGetPushSettings {
+    Source = "http://example.com/nugetfeed",
+    ApiKey = "4003d786-cc37-4004-bfdf-c4f3e8ef9b3a"
+}); 
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

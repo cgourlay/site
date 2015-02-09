@@ -132,7 +132,25 @@ Type: <a href="/api/cake.core.io/3181b989.html">FilePath</a></li>
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.solution/427621ff.html">SolutionParserResult</a></div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.solution/427621ff.html">SolutionParserResult</a></div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var solutionPath = "./src/Cake.sln";
+Information("Parsing {0}", solutionPath);
+var parsedSolution = ParseSolution(solutionPath);
+foreach(var project in parsedSolution.Projects)
+{
+    Information(
+        @"Solution project file:
+    Name: {0}
+    Path: {1}
+    Id  : {2}
+    Type: {3}",
+        project.Name,
+        project.Path,
+        project.Id,
+        project.Type
+    );
+}
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

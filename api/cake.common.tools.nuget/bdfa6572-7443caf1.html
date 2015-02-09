@@ -152,7 +152,27 @@ The settings.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var nugetSourceSettings = new NuGetSourcesSettings
+                            {
+                                UserName = EnvironmentVariable("PRIVATE_FEED_USERNAME"),
+                                Password = EnvironmentVariable("PRIVATE_FEED_PASSWORD"),
+                                IsSensitiveSource = true,
+                                Verbosity = NuGetVerbosity.Detailed
+                            };
+            
+var feed = new
+            {
+                Name = EnvironmentVariable("PRIVATE_FEED_NAME"),
+                Source = EnvironmentVariable("PRIVATE_FEED_SOURCE")
+            };
+            
+NuGetAddSource(
+    name:feed.Name,
+    source:feed.Source,
+    settings:nugetSourceSettings
+);
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

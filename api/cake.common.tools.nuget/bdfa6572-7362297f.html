@@ -111,8 +111,8 @@
 </ol>
 <div class="alert alert-info">
 
-            Removes NuGet package source using the specified name & source from global user config
-            
+             Removes NuGet package source using the specified name & source from global user config
+             
 </div>
 <div class="panel panel-default"><div class="panel-heading"><b>Parameters</b></div><div class="panel-body"><ul>
 <li><b>
@@ -143,7 +143,18 @@ Path to the package(s) source.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var feed = new
+            {
+                Name = EnvironmentVariable("PRIVATE_FEED_NAME"),
+                Source = EnvironmentVariable("PRIVATE_FEED_SOURCE")
+            };
+             
+uGetRemoveSource(
+   name:feed.Name,
+   source:feed.Source
+;
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

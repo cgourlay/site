@@ -132,7 +132,35 @@ Type: <a href="/api/cake.core.io/3181b989.html">FilePath</a></li>
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.solution.project/6f1a778f.html">ProjectParserResult</a></div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.solution.project/6f1a778f.html">ProjectParserResult</a></div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var parsedProject = ParseProject("./src/Cake/Cake.csproj");
+Information(
+    @"    Parsed project file:
+    Configuration         : {0}
+    Platform              : {1}
+    OutputType            : {2}
+    RootNameSpace         : {3}
+    AssemblyName          : {4}
+    TargetFrameworkVersion: {5}
+    Files                 : {6}",
+    parsedProject.Configuration,
+    parsedProject.Platform,
+    parsedProject.OutputType,
+    parsedProject.RootNameSpace,
+    parsedProject.AssemblyName,
+    parsedProject.TargetFrameworkVersion,
+    string.Concat(
+        parsedProject
+            .Files
+            .Select(
+                file=>  string.Format(
+                            "\r\n            {0}",
+                            file.FilePath
+                        )
+            )
+    )
+);
+</code></pre>
+</div></div></p>
         </div>
 
       </div>
