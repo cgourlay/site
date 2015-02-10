@@ -152,21 +152,47 @@ NuSpecContent
 <td>
 <a href="/api/cake.common.tools.nuget.pack/174880bf-5cb332a0.html">Source</a></td>
 <td>String</td><td>
-            The location of the file or files to include. The path is relative to the NuSpec file unless an absolute path is specified. The wildcard character, *, is allowed. Using a double wildcard, **, implies a recursive directory search.
+            Gets or sets the location of the file or files to include. 
+            The path is relative to the NuSpec file unless an absolute path is specified. 
+            The wildcard character - 
+<code>
+*
+</code>
+ - is allowed. 
+            Using a double wildcard - 
+<code>
+**
+</code>
+ implies a recursive directory search.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.pack/174880bf-020f9fbc.html">Target</a></td>
 <td>String</td><td>
-            This is a relative path to the directory within the package where the source files will be placed.
+            Gets or sets the relative path to the directory within the package where the source files will be placed.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.pack/174880bf-956ed460.html">Exclude</a></td>
 <td>String</td><td>
-            The file or files to exclude. This is usually combined with a wildcard value in the `src` attribute. The `exclude` attribute can contain a semi-colon delimited list of files or a file pattern. Using a double wildcard, **, implies a recursive exclude pattern.
+            Gets or sets the file or files to exclude. 
+            This is usually combined with a wildcard value in the 
+<code>
+src
+</code>
+ attribute. 
+            The 
+<code>
+exclude
+</code>
+ attribute can contain a semi-colon delimited list of files or a file pattern. 
+            Using a double wildcard - 
+<code>
+**
+</code>
+ - implies a recursive exclude pattern.
             
 </td></tr>
 </tbody>

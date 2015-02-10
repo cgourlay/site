@@ -96,7 +96,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           
           <div class="page-header">
-            <h2>NuGetSourcesSettings.Default <small>Property</small></h2>
+            <h2>DirectoryExtensions <small>Class</small></h2>
           </div>
           
           <p><ol class="breadcrumb">
@@ -104,17 +104,67 @@
 <a href="/api-documentation.html">API Documentation</a>
 </li>
 <li>
-<a href="/api/cake.common.tools.nuget.sources.html">Cake.Common.Tools.NuGet.Sources</a>
+<a href="/api/cake.core.html">Cake.Core</a>
 </li>
 <li class="active">
-<a href="/api/cake.common.tools.nuget.sources/930e4bcf.html">NuGetSourcesSettings</a></li>
+DirectoryExtensions
+</li>
 </ol>
+<ul>
+<li>
+System.Object
+</li>
+<ul>
+<li>
+DirectoryExtensions
+</li>
+</ul>
+</ul>
 <div class="alert alert-info">
 
-            Gets the default settings.
+            Contains extensions for 
+<a href="/api/cake.core.io/452cdee5.html">IDirectory</a>.
             
 </div>
-<div class="panel panel-default"><div class="panel-heading"><b>Property value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.tools.nuget.sources/930e4bcf.html">NuGetSourcesSettings</a></div></div></p>
+<div class="panel panel-default"><div class="panel-heading"><b>Methods</b></div><div class="panel-body"><table class="table">
+<thead>
+<tr>
+<th class="col-md-3">Name</th>
+<th class="col-md-9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/api/cake.core/3c77fc8b-abd0eb04.html">GetDirectories(IDirectory, String, SearchScope, Func&lt;IFileSystemInfo,Boolean&gt;)</a></td>
+<td>
+            Gets directories matching the specified filter and scope, with option to exclude hidden directories.
+            
+</td></tr>
+<tr>
+<td>
+<a href="/api/cake.core/3c77fc8b-d85c026e.html">GetDirectories(IDirectory, String, SearchScope, Func&lt;IFileSystemInfo,Boolean&gt;, Action&lt;IFileSystemInfo&gt;)</a></td>
+<td>
+            Gets directories matching the specified filter and scope, with option to exclude hidden directories.
+            
+</td></tr>
+<tr>
+<td>
+<a href="/api/cake.core/3c77fc8b-557ab3b0.html">GetFiles(IDirectory, String, SearchScope, Func&lt;IFileSystemInfo,Boolean&gt;)</a></td>
+<td>
+            Gets files matching the specified filter and scope.
+            
+</td></tr>
+<tr>
+<td>
+<a href="/api/cake.core/3c77fc8b-3ac2cb6e.html">GetFiles(IDirectory, String, SearchScope, Func&lt;IFileSystemInfo,Boolean&gt;, Action&lt;IFileSystemInfo&gt;)</a></td>
+<td>
+            Gets files matching the specified filter and scope.
+            
+</td></tr>
+</tbody>
+</table>
+</div></div></p>
         </div>
 
       </div>

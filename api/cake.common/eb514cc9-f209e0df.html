@@ -134,7 +134,15 @@ The argument name.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> T</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> T</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">//Cake.exe .\argument.cake -myArgument="is valid" -loopCount = 5
+Information("Argument {0}", Argument<string>("myArgument"));
+var loopCount = Argument<int>("loopCount");
+for(var index = 0;index<loopCount; index++)
+{
+    Information("Index {0}", index);
+}
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

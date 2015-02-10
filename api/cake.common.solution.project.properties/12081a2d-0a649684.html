@@ -134,7 +134,12 @@ The assembly info path.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.solution.project.properties/aa3585e3.html">AssemblyInfoParseResult</a></div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.solution.project.properties/aa3585e3.html">AssemblyInfoParseResult</a></div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var assemblyInfo = ParseAssemblyInfo("./SolutionInfo.cs");
+Information("Version: {0}", assemblyInfo.AssemblyVersion);
+Information("File version: {0}", assemblyInfo.AssemblyFileVersion);
+Information("Informational version: {0}", assemblyInfo.AssemblyInformationalVersion);
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

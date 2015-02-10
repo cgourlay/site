@@ -96,7 +96,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           
           <div class="page-header">
-            <h2>NuGetSourcesSettings.Default <small>Property</small></h2>
+            <h2>DirectoryExtensions.GetDirectories <small>Method</small></h2>
           </div>
           
           <p><ol class="breadcrumb">
@@ -104,17 +104,65 @@
 <a href="/api-documentation.html">API Documentation</a>
 </li>
 <li>
-<a href="/api/cake.common.tools.nuget.sources.html">Cake.Common.Tools.NuGet.Sources</a>
+<a href="/api/cake.core.html">Cake.Core</a>
 </li>
 <li class="active">
-<a href="/api/cake.common.tools.nuget.sources/930e4bcf.html">NuGetSourcesSettings</a></li>
+<a href="/api/cake.core/3c77fc8b.html">DirectoryExtensions</a></li>
 </ol>
 <div class="alert alert-info">
 
-            Gets the default settings.
+            Gets directories matching the specified filter and scope, with option to exclude hidden directories.
             
 </div>
-<div class="panel panel-default"><div class="panel-heading"><b>Property value</b></div><div class="panel-body"><b>Type:</b> <a href="/api/cake.common.tools.nuget.sources/930e4bcf.html">NuGetSourcesSettings</a></div></div></p>
+<div class="panel panel-default"><div class="panel-heading"><b>Parameters</b></div><div class="panel-body"><ul>
+<li><b>
+directory</b><ul><li>
+Type: <a href="/api/cake.core.io/452cdee5.html">IDirectory</a></li>
+</ul>
+<ul><li>
+The directory.
+</li>
+</ul>
+</li>
+<li><b>
+filter</b><ul><li>
+Type: String</li>
+</ul>
+<ul><li>
+The filter.
+</li>
+</ul>
+</li>
+<li><b>
+scope</b><ul><li>
+Type: <a href="/api/cake.core.io/ec85f3cc.html">SearchScope</a></li>
+</ul>
+<ul><li>
+The search scope.
+</li>
+</ul>
+</li>
+<li><b>
+predicate</b><ul><li>
+Type: Func&lt;<a href="/api/cake.core.io/c3e28b1e.html">IFileSystemInfo</a>, Boolean&gt;</li>
+</ul>
+<ul><li>
+Predicate used to filter directories based on file system information.
+</li>
+</ul>
+</li>
+<li><b>
+action</b><ul><li>
+Type: Action&lt;<a href="/api/cake.core.io/c3e28b1e.html">IFileSystemInfo</a>&gt;</li>
+</ul>
+<ul><li>
+Callback if directory gets filtered by 
+.
+</li>
+</ul>
+</li>
+</ul>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> System.Collections.Generic.IEnumerable&lt;<a href="/api/cake.core.io/452cdee5.html">Cake.Core.IO.IDirectory</a>&gt;</div></div></p>
         </div>
 
       </div>

@@ -111,7 +111,7 @@
 </ol>
 <div class="alert alert-info">
 
-            Checks for the existance of a value for a given enviroment variable.
+            Checks for the existence of a value for a given environment variable.
             
 </div>
 <div class="panel panel-default"><div class="panel-heading"><b>Parameters</b></div><div class="panel-body"><ul>
@@ -134,7 +134,16 @@ The environment variable.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> System.Boolean</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body"><b>Type:</b> System.Boolean</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">if (HasEnvironmentVariable("ONLY_AVAIL_UNDER_CI"))
+{
+Information("Running under CI");
+}
+else
+{
+Information("Running locally");
+}
+</code></pre>
+</div></div></p>
         </div>
 
       </div>

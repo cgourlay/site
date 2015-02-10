@@ -153,69 +153,78 @@ NuGetInstallSettings
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-2a054c75.html">ToolPath</a></td>
 <td><a href="/api/cake.core.io/3181b989.html">FilePath</a></td><td>
-            Path to nuget.exe
+            Gets or sets the path to 
+<code>
+nuget.exe
+</code>
+.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-560dbc1d.html">OutputDirectory</a></td>
 <td><a href="/api/cake.core.io/38f83116.html">DirectoryPath</a></td><td>
-            Specifies the directory in which packages will be installed. If none specified, uses the current directory.
+            Gets or sets the directory in which packages will be installed. 
+            If none is specified, the current directory will be used.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-d0007c1b.html">Version</a></td>
 <td>String</td><td>
-            The version of the package to install. If none specified, uses the latest.
+            Gets or sets the version of the package to install.
+            If none specified, the latest will be used.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-a3425fd7.html">ExcludeVersion</a></td>
 <td>Boolean</td><td>
-            If set, the destination folder will contain only the package name, not the version number
+            Gets or sets a value indicating whether to exclude the version number from the package folder.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-10ca7493.html">Prerelease</a></td>
 <td>Boolean</td><td>
-            Allows prerelease packages to be installed. This flag is not required when restoring packages by installing from packages.config.
+            Gets or sets a value indicating whether to allow installation of prerelease packages.
+            This flag is not required when restoring packages by installing from packages.config.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-8840f6c8.html">RequireConsent</a></td>
 <td>Boolean</td><td>
-            Checks if package install consent is granted before installing a package.
+            Gets or sets a value indicating whether to check if package
+            install consent is granted before installing a package.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-792fec5f.html">SolutionDirectory</a></td>
 <td><a href="/api/cake.core.io/38f83116.html">DirectoryPath</a></td><td>
-            Solution root for package restore.
+            Gets or sets the solution directory path for package restore.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-8fefefea.html">Source</a></td>
 <td>ICollection&lt;String&gt;</td><td>
-            A list of packages sources to use for this command.
+            Gets or sets a list of packages sources to use for this command.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-e3544866.html">NoCache</a></td>
 <td>Boolean</td><td>
-            Sets whether or not to use the machine cache as the first package source.
+            Gets or sets a value indicating whether or not to use the machine cache as the first package source.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-e497eb6c.html">DisableParallelProcessing</a></td>
 <td>Boolean</td><td>
+            Gets or sets a value indicating whether to disable parallel processing of packages for this command.
             Disable parallel processing of packages for this command.
             
 </td></tr>
@@ -223,14 +232,19 @@ NuGetInstallSettings
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-bcf79cff.html">Verbosity</a></td>
 <td>Nullable&lt;<a href="/api/cake.common.tools.nuget/4efc43a2.html">NuGetVerbosity</a>&gt;</td><td>
-            Display this amount of details in the output: Normal, Quiet, Detailed.
+            Gets or sets the output verbosity.
             
 </td></tr>
 <tr>
 <td>
 <a href="/api/cake.common.tools.nuget.install/babcb33c-a88d6154.html">ConfigFile</a></td>
 <td><a href="/api/cake.core.io/3181b989.html">FilePath</a></td><td>
-            The NuGet configuration file. If not specified, file %AppData%\NuGet\NuGet.config is used as configuration file.
+            Gets or sets the NuGet configuration file.
+            If not specified, the file 
+<code>
+%AppData%\NuGet\NuGet.config
+</code>
+ is used as the configuration file.
             
 </td></tr>
 </tbody>

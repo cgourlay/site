@@ -143,7 +143,19 @@ The settings.
 </ul>
 </li>
 </ul>
-</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div></p>
+</div></div><div class="panel panel-default"><div class="panel-heading"><b>Return value</b></div><div class="panel-body">No return value.</div></div><div class="panel panel-default"><div class="panel-heading"><b>Example</b></div><div class="panel-body"><pre><code class="language-cs">var file = "./SolutionInfo.cs";
+var version = "0.0.1";
+var buildNo = "123";
+var semVersion = string.Concat(version + "-" + buildNo);
+CreateAssemblyInfo(file, new AssemblyInfoSettings {
+    Product = "SampleProject",
+    Version = version,
+    FileVersion = version,
+    InformationalVersion = semVersion,
+    Copyright = string.Format("Copyright (c) Contoso 2014 - {0}", DateTime.Now.Year)
+});
+</code></pre>
+</div></div></p>
         </div>
 
       </div>
