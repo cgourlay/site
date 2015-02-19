@@ -93,7 +93,32 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var solutionPath = &quot;./src/Cake.sln&quot;;
+Information(&quot;Parsing {0}&quot;, solutionPath);
+var parsedSolution = ParseSolution(solutionPath);
+foreach(var project in parsedSolution.Projects)
+{
+    Information(
+        @&quot;Solution project file:
+    Name: {0}
+    Path: {1}
+    Id  : {2}
+    Type: {3}&quot;,
+        project.Name,
+        project.Path,
+        project.Id,
+        project.Type
+    );
+}</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

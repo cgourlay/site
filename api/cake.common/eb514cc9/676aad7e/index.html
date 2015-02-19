@@ -94,7 +94,22 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">//Cake.exe .\argument.cake -myArgument=&quot;is valid&quot; -loopCount = 5
+Information(&quot;Argument {0}&quot;, Argument&lt;string&gt;(&quot;myArgument&quot;, &quot;is NOT valid&quot;));
+var loopCount = Argument&lt;int&gt;(&quot;loopCount&quot;, 10);
+for(var index = 0;index&lt;loopCount; index++)
+{
+    Information(&quot;Index {0}&quot;, index);
+}</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

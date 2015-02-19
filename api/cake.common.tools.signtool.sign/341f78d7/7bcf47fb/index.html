@@ -94,7 +94,28 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">Task(&quot;Sign&quot;)
+    .IsDependentOn(&quot;Clean&quot;)
+    .IsDependentOn(&quot;Restore&quot;)
+    .IsDependentOn(&quot;Build&quot;)
+    .Does(() =&gt;
+{
+    var files = GetFiles(solutionDir + &quot;/**/bin/&quot; + configuration + &quot;/**/*.exe&quot;);
+    Sign(files, new SignToolSignSettings {
+            TimeStampUri = new Uri(&quot;http://timestamp.digicert.com&quot;),
+            CertPath = &quot;digicert.pfx&quot;,
+            Password = &quot;TopSecret&quot;
+    });
+});</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

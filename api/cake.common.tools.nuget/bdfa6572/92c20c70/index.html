@@ -94,7 +94,25 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var feed = new
+            {
+                Name = EnvironmentVariable(&quot;PUBLIC_FEED_NAME&quot;),
+                Source = EnvironmentVariable(&quot;PUBLIC_FEED_SOURCE&quot;)
+            };
+            
+NuGetAddSource(
+    name:feed.Name,
+    source:feed.Source
+);</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

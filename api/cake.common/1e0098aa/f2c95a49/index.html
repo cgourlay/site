@@ -93,7 +93,24 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var releaseNotes = ParseAllReleaseNotes(&quot;./ReleaseNotes.md&quot;);
+foreach(var releaseNote in releaseNotes)
+{
+    Information(&quot;Version: {0}&quot;, releaseNote.Version);
+    foreach(var note in releaseNote.Notes)
+    {
+        Information(&quot;\t{0}&quot;, note);
+    }
+}</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

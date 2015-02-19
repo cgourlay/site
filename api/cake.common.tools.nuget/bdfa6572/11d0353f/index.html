@@ -93,7 +93,30 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var feed = new
+{
+Name = EnvironmentVariable(&quot;PRIVATE_FEED_NAME&quot;),
+Source = EnvironmentVariable(&quot;PRIVATE_FEED_SOURCE&quot;)
+};
+if (!NuGetHasSource(
+source:feed.Source
+))
+{
+Information(&quot;Source missing&quot;);
+}
+else
+{
+Information(&quot;Source already exists&quot;);
+}</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

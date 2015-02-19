@@ -95,7 +95,34 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var nugetSourceSettings = new NuGetSourcesSettings
+                            {
+                                UserName = EnvironmentVariable(&quot;PRIVATE_FEED_USERNAME&quot;),
+                                Password = EnvironmentVariable(&quot;PRIVATE_FEED_PASSWORD&quot;),
+                                IsSensitiveSource = true,
+                                Verbosity = NuGetVerbosity.Detailed
+                            };
+            
+var feed = new
+            {
+                Name = EnvironmentVariable(&quot;PRIVATE_FEED_NAME&quot;),
+                Source = EnvironmentVariable(&quot;PRIVATE_FEED_SOURCE&quot;)
+            };
+            
+NuGetRemoveSource(
+   name:feed.Name,
+   source:feed.Source,
+   settings:nugetSourceSettings
+);</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

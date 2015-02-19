@@ -94,7 +94,40 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var nuGetPackSettings   = new NuGetPackSettings {
+                                Id                      = &quot;TestNuget&quot;,
+                                Version                 = &quot;0.0.0.1&quot;,
+                                Title                   = &quot;The tile of the package&quot;,
+                                Authors                 = new[] {&quot;John Doe&quot;},
+                                Owners                  = new[] {&quot;Contoso&quot;},
+                                Description             = &quot;The description of the package&quot;,
+                                Summary                 = &quot;Excellent summare of what the package does&quot;, 
+                                ProjectUrl              = new Uri(&quot;https://github.com/SomeUser/TestNuget/&quot;),
+                                IconUrl                 = new Uri(&quot;http://cdn.rawgit.com/SomeUser/TestNuget/master/icons/testnuget.png&quot;),
+                                LicenseUrl              = new Uri(&quot;https://github.com/SomeUser/TestNuget/blob/master/LICENSE.md&quot;),
+                                Copyright               = &quot;Some company 2015&quot;,
+                                ReleaseNotes            = new [] {&quot;Bug fixes&quot;, &quot;Issue fixes&quot;, &quot;Typos&quot;},
+                                Tags                    = new [] {&quot;Cake&quot;, &quot;Script&quot;, &quot;Build&quot;},
+                                RequireLicenseAcceptance= false,        
+                                Symbols                 = false,
+                                NoPackageAnalysis       = true,
+                                Files                   = new [] {
+                                                                     new NuSpecContent {Source = &quot;bin/SlackPRTGCommander.dll&quot;, Target = &quot;bin&quot;},
+                                                                  },
+                                BasePath                = &quot;./src/TestNuget/bin/release&quot;, 
+                                OutputDirectory         = &quot;./nuget&quot;
+                            };
+                
+NuGetPack(&quot;./nuspec/SlackPRTGCommander.nuspec&quot;, nuGetPackSettings);</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

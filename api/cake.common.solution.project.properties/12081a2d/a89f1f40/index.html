@@ -94,7 +94,26 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">var file = &quot;./SolutionInfo.cs&quot;;
+var version = &quot;0.0.1&quot;;
+var buildNo = &quot;123&quot;;
+var semVersion = string.Concat(version + &quot;-&quot; + buildNo);
+CreateAssemblyInfo(file, new AssemblyInfoSettings {
+    Product = &quot;SampleProject&quot;,
+    Version = version,
+    FileVersion = version,
+    InformationalVersion = semVersion,
+    Copyright = string.Format(&quot;Copyright (c) Contoso 2014 - {0}&quot;, DateTime.Now.Year)
+});</code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

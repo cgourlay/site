@@ -94,7 +94,23 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">// Get the path to the package.
+var package = &quot;./nuget/SlackPRTGCommander.0.0.1.nupkg&quot;;
+            
+// Push the package.
+NuGetPush(package, new NuGetPushSettings {
+    Source = &quot;http://example.com/nugetfeed&quot;,
+    ApiKey = &quot;4003d786-cc37-4004-bfdf-c4f3e8ef9b3a&quot;
+}); </code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 

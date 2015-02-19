@@ -93,7 +93,28 @@
 )
 </code></pre>
 	</div>
-</div>	</p>
+</div>
+
+<!-- EXAMPLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Example</b></div>
+		<div class="panel-body">
+			<pre><code class="language-cs">
+            This sample shows how to call the <i>Cake.Common.ArgumentAliases.HasArgument(Cake.Core.ICakeContext,System.String)</i> method.
+            var argumentName = &quot;myArgument&quot;;
+//Cake.exe .\hasargument.cake -myArgument=&quot;is specified&quot;
+if (HasArgument(argumentName))
+{
+    Information(&quot;{0} is specified&quot;, argumentName);
+}
+//Cake.exe .\hasargument.cake
+else
+{
+    Warning(&quot;{0} not specified&quot;, argumentName);
+} </code></pre>
+		</div>
+	</div>
+</p>
           </div>
         </div>
 
