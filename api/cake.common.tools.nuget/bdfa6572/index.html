@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Patrik Svensson">
+    <meta name="keywords" content="" />
+    <link rel="icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+    <title>Cake Build - NuGetAliases</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="/css/cake.css" rel="stylesheet">
+
+    <script src="/js/highlight.pack.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Cake Build</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source Code</a></li>
+            <li><a href="https://github.com/cake-build/cake/releases"><i class="fa fa-cloud-download"></i> Download</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-sm-3 col-md-3 sidebar">   
+          <ul class="nav nav-sidebar">
+<li><a href="/">Welcome to Cake!</a></li><li><a href="/introduction">Introduction</a></li><li><a href="/how-does-it-work">How does it work?</a></li><li><a href="/getting-started">Getting started</a></li><li><a href="/contributors">Contributors</a></li><li><a href="/contribution-guidelines">Contribution guidelines</a></li><li><a href="/appveyor-integration">AppVeyor Integration</a></li><li><a href="/dsl">DSL reference</a></li><li class="active"><a href="/api">API reference</a><ul>
+<li class="list-unstyled"><a href="/api/cake.common">Cake.Common</a></li><li class="list-unstyled"><a href="/api/cake.common.build">Cake.Common.Build</a></li><li class="list-unstyled"><a href="/api/cake.common.build.appveyor">Cake.Common.Build.AppVeyor</a></li><li class="list-unstyled"><a href="/api/cake.common.build.appveyor.data">Cake.Common.Build.AppVeyor.Data</a></li><li class="list-unstyled"><a href="/api/cake.common.diagnostics">Cake.Common.Diagnostics</a></li><li class="list-unstyled"><a href="/api/cake.common.io">Cake.Common.IO</a></li><li class="list-unstyled"><a href="/api/cake.common.solution">Cake.Common.Solution</a></li><li class="list-unstyled"><a href="/api/cake.common.solution.project">Cake.Common.Solution.Project</a></li><li class="list-unstyled"><a href="/api/cake.common.solution.project.properties">Cake.Common.Solution.Project.Properties</a></li><li class="list-unstyled"><a href="/api/cake.common.text">Cake.Common.Text</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.ilmerge">Cake.Common.Tools.ILMerge</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.msbuild">Cake.Common.Tools.MSBuild</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.mstest">Cake.Common.Tools.MSTest</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget">Cake.Common.Tools.NuGet</a><ul>
+<li class="list-unstyled"><b><a href="/api/cake.common.tools.nuget/bdfa6572">NuGetAliases</a></b><ul>
+<li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/92c20c70">NuGetAddSource(ICakeContext, string, string)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/7443caf1">NuGetAddSource(ICakeContext, string, string, NuGetSourcesSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/11d0353f">NuGetHasSource(ICakeContext, string)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/6fc1af2f">NuGetHasSource(ICakeContext, string, NuGetSourcesSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/eaa75b71">NuGetInstall(ICakeContext, string)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/2451be66">NuGetInstall(ICakeContext, string, NuGetInstallSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/81a5d7b8">NuGetInstallFromConfig(ICakeContext, FilePath)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/511e57a1">NuGetInstallFromConfig(ICakeContext, FilePath, NuGetInstallSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/f4bfefe4">NuGetPack(ICakeContext, FilePath, NuGetPackSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/41c53943">NuGetPush(ICakeContext, FilePath, NuGetPushSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/7362297f">NuGetRemoveSource(ICakeContext, string, string)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/0bc3a8dc">NuGetRemoveSource(ICakeContext, string, string, NuGetSourcesSettings)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/a0e10885">NuGetRestore(ICakeContext, FilePath)</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/bdfa6572/256fc700">NuGetRestore(ICakeContext, FilePath, NuGetRestoreSettings)</a></li></ul>
+</li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget/4efc43a2">NuGetVerbosity</a></li></ul>
+</li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget.install">Cake.Common.Tools.NuGet.Install</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget.pack">Cake.Common.Tools.NuGet.Pack</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget.push">Cake.Common.Tools.NuGet.Push</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget.restore">Cake.Common.Tools.NuGet.Restore</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nuget.sources">Cake.Common.Tools.NuGet.Sources</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.nunit">Cake.Common.Tools.NUnit</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.signtool.sign">Cake.Common.Tools.SignTool.Sign</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.wix">Cake.Common.Tools.WiX</a></li><li class="list-unstyled"><a href="/api/cake.common.tools.xunit">Cake.Common.Tools.XUnit</a></li><li class="list-unstyled"><a href="/api/cake.core">Cake.Core</a></li><li class="list-unstyled"><a href="/api/cake.core.annotations">Cake.Core.Annotations</a></li><li class="list-unstyled"><a href="/api/cake.core.diagnostics">Cake.Core.Diagnostics</a></li><li class="list-unstyled"><a href="/api/cake.core.io">Cake.Core.IO</a></li><li class="list-unstyled"><a href="/api/cake.core.io.arguments">Cake.Core.IO.Arguments</a></li><li class="list-unstyled"><a href="/api/cake.core.io.nuget">Cake.Core.IO.NuGet</a></li><li class="list-unstyled"><a href="/api/cake.core.scripting">Cake.Core.Scripting</a></li><li class="list-unstyled"><a href="/api/cake.core.scripting.codegen">Cake.Core.Scripting.CodeGen</a></li><li class="list-unstyled"><a href="/api/cake.core.scripting.processors">Cake.Core.Scripting.Processors</a></li><li class="list-unstyled"><a href="/api/cake.core.text">Cake.Core.Text</a></li><li class="list-unstyled"><a href="/api/cake.core.utilities">Cake.Core.Utilities</a></li></ul>
+</li></ul>
+
+        </div>
+
+        <!-- Container -->
+        <div class="content-container">
+          <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+            <div class="page-header">
+              <h2>NuGetAliases <small>Class</small></h2>
+            </div>
+            <p><ol class="breadcrumb"><li><a href="/api/">API reference</a></li><li><a href="/api/cake.common.tools.nuget/">Cake.Common.Tools.NuGet</a></li><li>NuGetAliases</li></ol></p>
+            <p><!-- INHERITANCE -->
+
+<!-- SUMMARY -->
+	<div class="alert alert-info">
+		<p>
+            Contains functionality for working with NuGet.
+            </p>
+	</div>
+
+<!-- SYNTAX -->
+<div class="panel panel-default">
+	<div class="panel-heading"><b>Syntax</b></div>
+	<div class="panel-body">
+		<pre><code class="language-cs">public static class NuGetAliases</code></pre>
+	</div>
+</div>	
+
+<!-- CONSTRUCTOR TABLE -->
+
+<!-- PROPERTY TABLE -->
+
+<!-- METHOD TABLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Methods</b></div>
+		<table class="table table-bordered table-striped">
+		    <thead>
+		        <tr>
+		            <th class="col-md-3">Name</th>
+		            <th class="col-md-9">Description</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/92c20c70/">NuGetAddSource(ICakeContext, string, string)</a></td>
+			            <td>
+            Adds NuGet package source using the specified name &source to global user config
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/7443caf1/">NuGetAddSource(ICakeContext, string, string, NuGetSourcesSettings)</a></td>
+			            <td>
+            Adds NuGet package source using the specified name, source & settings to global user config
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/11d0353f/">NuGetHasSource(ICakeContext, string)</a></td>
+			            <td>
+            Checks whether or not a NuGet package source exists in the global user configuration, using the specified source.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/6fc1af2f/">NuGetHasSource(ICakeContext, string, NuGetSourcesSettings)</a></td>
+			            <td>
+            Checks whether or not a NuGet package source exists in the global user configuration, using the specified source and settings.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/eaa75b71/">NuGetInstall(ICakeContext, string)</a></td>
+			            <td>
+            Installs a NuGet package.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/2451be66/">NuGetInstall(ICakeContext, string, NuGetInstallSettings)</a></td>
+			            <td>
+            Installs a NuGet package using the specified settings.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/81a5d7b8/">NuGetInstallFromConfig(ICakeContext, FilePath)</a></td>
+			            <td>
+            Installs NuGet packages using the specified package configuration.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/511e57a1/">NuGetInstallFromConfig(ICakeContext, FilePath, NuGetInstallSettings)</a></td>
+			            <td>
+            Installs NuGet packages using the specified package configuration and settings.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/f4bfefe4/">NuGetPack(ICakeContext, FilePath, NuGetPackSettings)</a></td>
+			            <td>
+            Creates a NuGet package using the specified Nuspec file.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/41c53943/">NuGetPush(ICakeContext, FilePath, NuGetPushSettings)</a></td>
+			            <td>
+            Pushes a NuGet package to a NuGet server and publishes it.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/7362297f/">NuGetRemoveSource(ICakeContext, string, string)</a></td>
+			            <td>
+            Removes NuGet package source using the specified name & source from global user config
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/0bc3a8dc/">NuGetRemoveSource(ICakeContext, string, string, NuGetSourcesSettings)</a></td>
+			            <td>
+            Removes NuGet package source using the specified name, source & settings from global user config
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/a0e10885/">NuGetRestore(ICakeContext, FilePath)</a></td>
+			            <td>
+            Restores NuGet packages for the specified target.
+            </td>
+			        </tr>
+			        <tr>
+			            <td><a href="/api/cake.common.tools.nuget/bdfa6572/256fc700/">NuGetRestore(ICakeContext, FilePath, NuGetRestoreSettings)</a></td>
+			            <td>
+            Restores NuGet packages using the specified settings.
+            </td>
+			        </tr>
+		    </tbody>
+		</table>
+	</div>
+
+<!-- OPERATOR TABLE -->
+
+<!-- EXTENSION METHOD TABLE -->
+</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

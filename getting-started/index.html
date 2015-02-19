@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Patrik Svensson">
+    <meta name="keywords" content="" />
+    <link rel="icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+    <title>Cake Build - Getting started</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="/css/cake.css" rel="stylesheet">
+
+    <script src="/js/highlight.pack.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Cake Build</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source Code</a></li>
+            <li><a href="https://github.com/cake-build/cake/releases"><i class="fa fa-cloud-download"></i> Download</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-sm-3 col-md-3 sidebar">   
+          <ul class="nav nav-sidebar">
+<li><a href="/">Welcome to Cake!</a></li><li><a href="/introduction">Introduction</a></li><li><a href="/how-does-it-work">How does it work?</a></li><li class="active"><a href="/getting-started">Getting started</a></li><li><a href="/contributors">Contributors</a></li><li><a href="/contribution-guidelines">Contribution guidelines</a></li><li><a href="/appveyor-integration">AppVeyor Integration</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
+
+        </div>
+
+        <!-- Container -->
+        <div class="content-container">
+          <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+            <div class="page-header">
+              <h2>Getting started <small></small></h2>
+            </div>
+            <p></p>
+            <p>
+<p>Assume our build script have four steps where we want to:</p>
+
+<ol>
+   <li>Clean up old artifacts.</li>
+   <li>Build the code.</li>
+   <li>Run unit tests.</li>
+   <li>Package generated artifacts.</li>
+</ol>
+
+<!-- CREATE THE BUILD SCRIPT -->
+<h3>1. Create the build script</h3>
+
+<p>A build script like that could look something like this.</p>
+
+<pre><code class="language-cs">var target = Argument<string>("target", "Package");
+var config = Argument<string>("config", "Release");
+
+Task("Clean")
+   .Does(() =>
+{
+   // Clean directories.
+   CleanDirectory("./output");
+   CleanDirectory("./output/bin");
+   CleanDirectories("./src/**/bin/" + config);
+});
+
+Task("Build")
+   .IsDependentOn("Clean")
+   .Does(() =>
+{
+   // Build the solution using MSBuild.
+   MSBuild("./src/Project.sln", settings => 
+      settings.SetConfiguration(config));     
+});
+
+Task("RunUnitTests")
+   .IsDependentOn("Build")
+   .Does(() =>
+{
+   // Run xUnit tests.
+   XUnit("./src/**/bin/" + config + "/*.Tests.dll");
+});
+
+Task("CopyFiles")
+   .IsDependentOn("RunUnitTests")
+   .Does(() =>
+{
+   var path = "./src/Project/bin/" + configuration;    
+   var files = GetFiles(path + "/**/*.dll") 
+      + GetFiles(path + "/**/*.exe");
+
+   // Copy all exe and dll files to the output directory.
+   CopyFiles(files, "./output/bin");
+});    
+
+Task("Package")
+   .IsDependentOn("RunUnitTests")
+   .Does(() =>
+{
+   // Zip all files in the bin directory.
+   Zip("./output/bin", "./output/build.zip");
+});
+
+RunTarget(target);
+</code></pre>
+
+<!-- RUN THE SCRIPT -->
+<h3>2. Run the script</h3>
+
+<p>To run our build script we invoke <code>Cake.exe</code> with the script file as the first argument, and (optionally) the name of our target task as the second argument. We can also tell Cake how much information we're interested in with the built in <code>verbosity</code> parameter, which is very useful when debugging a script.</p>
+
+<pre><code class="language-bat">C:> Cake.exe build.cake -target=Package -verbosity=diagnostic
+</code></pre>
+
+<p>This is just an example. Much more functionality is already implemented such as support for <code>MSBuild</code>, <code>MSTest</code>, <code>xUnit</code>, <code>NUnit</code>, <code>ILMerge</code>, <code>NuGet pack/restore</code> and the most common file system operations such as <code>file/folder manipulation</code> and <code>globbing</code>.</p>
+
+<!-- TRY IT OUT -->
+<h3>3. Try it out</h3>
+
+<p>To see an actual build script in action, fork or clone the <a href="https://github.com/cake-build/cake">GitHub repository</a> and run <code>build.cmd</code> which will download Cake from NuGet and run the <code>build.cake</code> script.</p>
+</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
