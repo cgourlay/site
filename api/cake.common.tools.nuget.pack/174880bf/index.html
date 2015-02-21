@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Patrik Svensson">
+    <meta name="generator" content="Sparrow">
     <meta name="keywords" content="" />
     <link rel="icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
@@ -71,7 +72,7 @@
         <div class="content-container">
           <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
             <div class="page-header">
-              <h2>NuSpecContent <small>Class</small></h2>
+              <h2>NuSpecContent <small></small></h2>
             </div>
             <p><ol class="breadcrumb"><li><a href="/api/">API reference</a></li><li><a href="/api/cake.common.tools.nuget.pack/">Cake.Common.Tools.NuGet.Pack</a></li><li>NuSpecContent</li></ol></p>
             <p><!-- INHERITANCE -->
@@ -108,9 +109,9 @@
 			            <td><a href="/api/cake.common.tools.nuget.pack/174880bf/956ed460/">Exclude</a></td>
 			            <td>
             Gets or sets the file or files to exclude. 
-            This is usually combined with a wildcard value in the  attribute. 
-            The  attribute can contain a semi-colon delimited list of files or a file pattern. 
-            Using a double wildcard -  - implies a recursive exclude pattern.
+            This is usually combined with a wildcard value in the <code>src</code> attribute. 
+            The <code>exclude</code> attribute can contain a semi-colon delimited list of files or a file pattern. 
+            Using a double wildcard - <code>**</code> - implies a recursive exclude pattern.
             </td>
 			        </tr>
 			        <tr>
@@ -118,8 +119,8 @@
 			            <td>
             Gets or sets the location of the file or files to include. 
             The path is relative to the NuSpec file unless an absolute path is specified. 
-            The wildcard character -  - is allowed. 
-            Using a double wildcard -  implies a recursive directory search.
+            The wildcard character - <code>*</code> - is allowed. 
+            Using a double wildcard - <code>**</code> implies a recursive directory search.
             </td>
 			        </tr>
 			        <tr>

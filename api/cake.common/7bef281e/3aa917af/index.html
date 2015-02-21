@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Patrik Svensson">
+    <meta name="generator" content="Sparrow">
     <meta name="keywords" content="" />
     <link rel="icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
@@ -79,7 +80,7 @@
 <!-- SUMMARY -->
 	<div class="alert alert-info">
 		<p>
-            Retrieves the value of the environment variable or  if the environment variable do not exist.
+            Retrieves the value of the environment variable or <code>null</code> if the environment variable do not exist.
             </p>
 	</div>
 
@@ -99,7 +100,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading"><b>Example</b></div>
 		<div class="panel-body">
-			<pre><code class="language-cs">Information(&quot;Home directory location: {0}&quot;, EnvironmentVariable(&quot;HOME&quot;) ?? &quot;Unknown location&quot;);</code></pre>
+			<pre><code>Information(&quot;Home directory location: {0}&quot;, EnvironmentVariable(&quot;HOME&quot;) ?? &quot;Unknown location&quot;);</code></pre>
 		</div>
 	</div>
 </p>
