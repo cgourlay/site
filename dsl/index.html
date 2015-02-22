@@ -77,230 +77,32 @@
 <div class="panel panel-success">
 	<div class="panel-heading"><b>Table of Content</b></div>
 	<ul class="list-group">
-	    	<a class="list-group-item" href="#buildsystem">Build System</a>
-	    	<a class="list-group-item" href="#msbuildresource">MSBuild Resource</a>
-	    	<a class="list-group-item" href="#assemblyinfo">Assembly Info</a>
-	    	<a class="list-group-item" href="#logging">Logging</a>
-	    	<a class="list-group-item" href="#environment">Environment</a>
-	    	<a class="list-group-item" href="#process">Process</a>
-	    	<a class="list-group-item" href="#releasenotes">Release Notes</a>
 	    	<a class="list-group-item" href="#arguments">Arguments</a>
-	    	<a class="list-group-item" href="#text">Text</a>
-	    	<a class="list-group-item" href="#ilmerge">ILMerge</a>
+	    	<a class="list-group-item" href="#assemblyinfo">Assembly Info</a>
+	    	<a class="list-group-item" href="#buildsystem">Build System</a>
 	    	<a class="list-group-item" href="#compression">Compression</a>
 	    	<a class="list-group-item" href="#directoryoperations">Directory Operations</a>
+	    	<a class="list-group-item" href="#environment">Environment</a>
 	    	<a class="list-group-item" href="#fileoperations">File Operations</a>
 	    	<a class="list-group-item" href="#globbing">Globbing</a>
+	    	<a class="list-group-item" href="#ilmerge">ILMerge</a>
+	    	<a class="list-group-item" href="#logging">Logging</a>
 	    	<a class="list-group-item" href="#msbuild">MSBuild</a>
+	    	<a class="list-group-item" href="#msbuildresource">MSBuild Resource</a>
 	    	<a class="list-group-item" href="#mstest">MSTest</a>
 	    	<a class="list-group-item" href="#nuget">NuGet</a>
 	    	<a class="list-group-item" href="#nunit">NUnit</a>
+	    	<a class="list-group-item" href="#process">Process</a>
+	    	<a class="list-group-item" href="#releasenotes">Release Notes</a>
 	    	<a class="list-group-item" href="#signing">Signing</a>
+	    	<a class="list-group-item" href="#text">Text</a>
 	    	<a class="list-group-item" href="#wix">WiX</a>
-	    	<a class="list-group-item" href="#xunitv2">xUnit v2</a>
 	    	<a class="list-group-item" href="#xunit">xUnit</a>
+	    	<a class="list-group-item" href="#xunitv2">xUnit v2</a>
 	</ul>	    
 </div>
 
 <!-- DSL CATEGORIES -->
-	<!-- Anchor link to section -->
-	<a name="buildsystem"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Build System</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.build/175bec7e/e8531c12/">BuildSystem</a></td>
-			            <td class="col-md-1">Property</td>
-			            <td class="col-md-8">
-            Gets a <a href="/api/cake.common.build/dd98349a/">BuildSystem</a> instance that can
-            be used to query for information about the current build system.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.build/175bec7e/780ea066/">AppVeyor</a></td>
-			            <td class="col-md-1">Property</td>
-			            <td class="col-md-8">
-            Gets a <i>Cake.Common.Build.AppVeyor</i> instance that can
-            be used to manipulate the AppVeyor environment.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
-	<a name="msbuildresource"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>MSBuild Resource</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.solution.project/65286dc8/25578715/">ParseProject(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Parses project information from project file
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.solution/430dd96d/0d6515cf/">ParseSolution(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Parses project information from a solution file.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
-	<a name="assemblyinfo"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Assembly Info</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.solution.project.properties/12081a2d/a89f1f40/">CreateAssemblyInfo(FilePath, AssemblyInfoSettings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Creates an assembly information file.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.solution.project.properties/12081a2d/0a649684/">ParseAssemblyInfo(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Parses an existing assembly information file.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
-	<a name="logging"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Logging</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/6685185c/">Error(string, Object[])</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Writes an error message to the log using the specified format information.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/119d68b1/">Warning(string, Object[])</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Writes a warning message to the log using the specified format information.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/c17e1c65/">Information(string, Object[])</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Writes an informational message to the log using the specified format information.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/c8a2fa1f/">Verbose(string, Object[])</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Writes a verbose message to the log using the specified format information.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/454c94d8/">Debug(string, Object[])</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Writes a debug message to the log using the specified format information.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
-	<a name="environment"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Environment</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common/7bef281e/3aa917af/">EnvironmentVariable(string)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Retrieves the value of the environment variable or <code>null</code> if the environment variable do not exist.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common/7bef281e/851a5a7c/">HasEnvironmentVariable(string)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Checks for the existence of a value for a given environment variable.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
-	<a name="process"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Process</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common/5bbfc7ff/1274306d/">StartProcess(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Starts the process resource that is specified by the filename.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common/5bbfc7ff/4b084f1f/">StartProcess(FilePath, ProcessSettings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Starts the process resource that is specified by the filename and settings.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
-	<a name="releasenotes"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Release Notes</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common/1e0098aa/f2c95a49/">ParseAllReleaseNotes(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Parses all release notes.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common/1e0098aa/5f81d05a/">ParseReleaseNotes(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Parses the latest release notes.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
 	<!-- Anchor link to section -->
 	<a name="arguments"></a>
 	<div class="panel panel-default">
@@ -334,50 +136,52 @@
 			</table>	
 	</div>
 	<!-- Anchor link to section -->
-	<a name="text"></a>
+	<a name="assemblyinfo"></a>
 	<div class="panel panel-default">
-		<div class="panel-heading"><b>Text</b></div>
+		<div class="panel-heading"><b>Assembly Info</b></div>
 			<!-- DSL SUB CATEGORIES -->
 			<!-- DSL METHODS -->
 			<table class="table table-bordered table-striped">
 			    <tbody>
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/8124a2e8/">TransformText(string)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.solution.project.properties/12081a2d/a89f1f40/">CreateAssemblyInfo(FilePath, AssemblyInfoSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Creates a text transformation from the provided template.
+            Creates an assembly information file.
             </td>
 			        </tr>		    	
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/3af41228/">TransformTextFile(FilePath)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.solution.project.properties/12081a2d/0a649684/">ParseAssemblyInfo(FilePath)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Creates a text transformation from the provided template on disc.
+            Parses an existing assembly information file.
             </td>
 			        </tr>		    	
 			    </tbody>
 			</table>	
 	</div>
 	<!-- Anchor link to section -->
-	<a name="ilmerge"></a>
+	<a name="buildsystem"></a>
 	<div class="panel panel-default">
-		<div class="panel-heading"><b>ILMerge</b></div>
+		<div class="panel-heading"><b>Build System</b></div>
 			<!-- DSL SUB CATEGORIES -->
 			<!-- DSL METHODS -->
 			<table class="table table-bordered table-striped">
 			    <tbody>
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.ilmerge/c01e3d2a/171fe635/">ILMerge(FilePath, FilePath, IEnumerable&lt;FilePath&gt;)</a></td>
-			            <td class="col-md-1">Method</td>
+			            <td class="col-md-3"><a href="/api/cake.common.build/175bec7e/e8531c12/">BuildSystem</a></td>
+			            <td class="col-md-1">Property</td>
 			            <td class="col-md-8">
-            Merges the specified assemblies.
+            Gets a <a href="/api/cake.common.build/dd98349a/">BuildSystem</a> instance that can
+            be used to query for information about the current build system.
             </td>
 			        </tr>		    	
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.ilmerge/c01e3d2a/b25b39ae/">ILMerge(FilePath, FilePath, IEnumerable&lt;FilePath&gt;, ILMergeSettings)</a></td>
-			            <td class="col-md-1">Method</td>
+			            <td class="col-md-3"><a href="/api/cake.common.build/175bec7e/780ea066/">AppVeyor</a></td>
+			            <td class="col-md-1">Property</td>
 			            <td class="col-md-8">
-            Merges the specified assemblies.
+            Gets a <i>Cake.Common.Build.AppVeyor</i> instance that can
+            be used to manipulate the AppVeyor environment.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -428,36 +232,6 @@
 		<div class="panel-heading"><b>Directory Operations</b></div>
 			<!-- DSL SUB CATEGORIES -->
 				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Delete</li>
-				</ul>
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/19d331e2/">DeleteDirectories(IEnumerable&lt;DirectoryPath&gt;, bool)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Deletes the specified directories.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/e1c29444/">DeleteDirectories(IEnumerable&lt;string&gt;, bool)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Deletes the specified directories.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/590155ef/">DeleteDirectory(DirectoryPath, bool)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Deletes the specified directory.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
 					<li class="list-group-item list-group-item-info">Clean</li>
 				</ul>
 			<!-- DSL METHODS -->
@@ -505,6 +279,22 @@
 			</table>	
 			<!-- DSL SUB CATEGORIES -->
 				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Copy</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/04788afa/">CopyDirectory(DirectoryPath, DirectoryPath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Copies a directory to the specified location.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
 					<li class="list-group-item list-group-item-info">Create</li>
 				</ul>
 			<!-- DSL METHODS -->
@@ -521,16 +311,55 @@
 			</table>	
 			<!-- DSL SUB CATEGORIES -->
 				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Copy</li>
+					<li class="list-group-item list-group-item-info">Delete</li>
 				</ul>
 			<!-- DSL METHODS -->
 			<table class="table table-bordered table-striped">
 			    <tbody>
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/04788afa/">CopyDirectory(DirectoryPath, DirectoryPath)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/19d331e2/">DeleteDirectories(IEnumerable&lt;DirectoryPath&gt;, bool)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Copies a directory to the specified location.
+            Deletes the specified directories.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/e1c29444/">DeleteDirectories(IEnumerable&lt;string&gt;, bool)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Deletes the specified directories.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/590155ef/">DeleteDirectory(DirectoryPath, bool)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Deletes the specified directory.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="environment"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Environment</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/7bef281e/3aa917af/">EnvironmentVariable(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Retrieves the value of the environment variable or <code>null</code> if the environment variable do not exist.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/7bef281e/851a5a7c/">HasEnvironmentVariable(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Checks for the existence of a value for a given environment variable.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -586,6 +415,36 @@
 			</table>	
 			<!-- DSL SUB CATEGORIES -->
 				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Delete</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/4d2f21e5/">DeleteFiles(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Deletes the specified files.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/4991eefa/">DeleteFiles(IEnumerable&lt;FilePath&gt;)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Deletes the specified files.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/078535fc/">DeleteFile(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Deletes the specified file.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
 					<li class="list-group-item list-group-item-info">Move</li>
 				</ul>
 			<!-- DSL METHODS -->
@@ -621,41 +480,27 @@
 			        </tr>		    	
 			    </tbody>
 			</table>	
-			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Delete</li>
-				</ul>
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/4d2f21e5/">DeleteFiles(string)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Deletes the specified files.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/4991eefa/">DeleteFiles(IEnumerable&lt;FilePath&gt;)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Deletes the specified files.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/078535fc/">DeleteFile(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Deletes the specified file.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
 	</div>
 	<!-- Anchor link to section -->
 	<a name="globbing"></a>
 	<div class="panel panel-default">
 		<div class="panel-heading"><b>Globbing</b></div>
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Directories</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/b6f866f7/0a89ebe2/">GetDirectories(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Gets all directory matching the specified pattern.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
 			<!-- DSL SUB CATEGORIES -->
 				<ul class="list-group">
 					<li class="list-group-item list-group-item-info">Files</li>
@@ -672,18 +517,73 @@
 			        </tr>		    	
 			    </tbody>
 			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="ilmerge"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>ILMerge</b></div>
 			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Directories</li>
-				</ul>
 			<!-- DSL METHODS -->
 			<table class="table table-bordered table-striped">
 			    <tbody>
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.io/b6f866f7/0a89ebe2/">GetDirectories(string)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.ilmerge/c01e3d2a/171fe635/">ILMerge(FilePath, FilePath, IEnumerable&lt;FilePath&gt;)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Gets all directory matching the specified pattern.
+            Merges the specified assemblies.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.ilmerge/c01e3d2a/b25b39ae/">ILMerge(FilePath, FilePath, IEnumerable&lt;FilePath&gt;, ILMergeSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Merges the specified assemblies.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="logging"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Logging</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/6685185c/">Error(string, Object[])</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Writes an error message to the log using the specified format information.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/119d68b1/">Warning(string, Object[])</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Writes a warning message to the log using the specified format information.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/c17e1c65/">Information(string, Object[])</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Writes an informational message to the log using the specified format information.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/c8a2fa1f/">Verbose(string, Object[])</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Writes a verbose message to the log using the specified format information.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.diagnostics/8f055f00/454c94d8/">Debug(string, Object[])</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Writes a debug message to the log using the specified format information.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -709,6 +609,31 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Builds the specified solution using MSBuild.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="msbuildresource"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>MSBuild Resource</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.solution.project/65286dc8/25578715/">ParseProject(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Parses project information from project file
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.solution/430dd96d/0d6515cf/">ParseSolution(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Parses project information from a solution file.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -759,61 +684,6 @@
 		<div class="panel-heading"><b>NuGet</b></div>
 			<!-- DSL SUB CATEGORIES -->
 				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Pack</li>
-				</ul>
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/f4bfefe4/">NuGetPack(FilePath, NuGetPackSettings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Creates a NuGet package using the specified Nuspec file.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Restore</li>
-				</ul>
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/a0e10885/">NuGetRestore(FilePath)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Restores NuGet packages for the specified target.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/256fc700/">NuGetRestore(FilePath, NuGetRestoreSettings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Restores NuGet packages using the specified settings.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">Push</li>
-				</ul>
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/41c53943/">NuGetPush(FilePath, NuGetPushSettings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Pushes a NuGet package to a NuGet server and publishes it.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
 					<li class="list-group-item list-group-item-info">AddSource</li>
 				</ul>
 			<!-- DSL METHODS -->
@@ -831,29 +701,6 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Adds NuGet package source using the specified name, source & settings to global user config
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-			<!-- DSL SUB CATEGORIES -->
-				<ul class="list-group">
-					<li class="list-group-item list-group-item-info">RemoveSource</li>
-				</ul>
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/7362297f/">NuGetRemoveSource(string, string)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Removes NuGet package source using the specified name & source from global user config
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/0bc3a8dc/">NuGetRemoveSource(string, string, NuGetSourcesSettings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Removes NuGet package source using the specified name, source & settings from global user config
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -918,6 +765,84 @@
 			        </tr>		    	
 			    </tbody>
 			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Pack</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/f4bfefe4/">NuGetPack(FilePath, NuGetPackSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Creates a NuGet package using the specified Nuspec file.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Push</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/41c53943/">NuGetPush(FilePath, NuGetPushSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Pushes a NuGet package to a NuGet server and publishes it.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">RemoveSource</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/7362297f/">NuGetRemoveSource(string, string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Removes NuGet package source using the specified name & source from global user config
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/0bc3a8dc/">NuGetRemoveSource(string, string, NuGetSourcesSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Removes NuGet package source using the specified name, source & settings from global user config
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Restore</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/a0e10885/">NuGetRestore(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Restores NuGet packages for the specified target.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/256fc700/">NuGetRestore(FilePath, NuGetRestoreSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Restores NuGet packages using the specified settings.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
 	</div>
 	<!-- Anchor link to section -->
 	<a name="nunit"></a>
@@ -973,6 +898,56 @@
 			</table>	
 	</div>
 	<!-- Anchor link to section -->
+	<a name="process"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Process</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/5bbfc7ff/1274306d/">StartProcess(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Starts the process resource that is specified by the filename.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/5bbfc7ff/4b084f1f/">StartProcess(FilePath, ProcessSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Starts the process resource that is specified by the filename and settings.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="releasenotes"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Release Notes</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/1e0098aa/f2c95a49/">ParseAllReleaseNotes(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Parses all release notes.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/1e0098aa/5f81d05a/">ParseReleaseNotes(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Parses the latest release notes.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
 	<a name="signing"></a>
 	<div class="panel panel-default">
 		<div class="panel-heading"><b>Signing</b></div>
@@ -1006,6 +981,31 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Signs the specified assemblies
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="text"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Text</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/8124a2e8/">TransformText(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Creates a text transformation from the provided template.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/3af41228/">TransformTextFile(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Creates a text transformation from the provided template on disc.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -1063,59 +1063,6 @@
 			</table>	
 	</div>
 	<!-- Anchor link to section -->
-	<a name="xunitv2"></a>
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>xUnit v2</b></div>
-			<!-- DSL SUB CATEGORIES -->
-			<!-- DSL METHODS -->
-			<table class="table table-bordered table-striped">
-			    <tbody>
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/73842de8/">XUnit2(string)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Runs all xUnit.net v2 tests in the assemblies matching the specified pattern.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/0dff34ea/">XUnit2(string, XUnit2Settings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Runs all xUnit.net v2 tests in the assemblies matching the specified pattern.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/2390e01b/">XUnit2(IEnumerable&lt;string&gt;)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Runs all xUnit.net v2 tests in the specified assemblies.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/20fd7ebf/">XUnit2(IEnumerable&lt;FilePath&gt;)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Runs all xUnit.net tests in the specified assemblies.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/84a76654/">XUnit2(IEnumerable&lt;string&gt;, XUnit2Settings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Runs all xUnit.net v2 tests in the specified assemblies.
-            </td>
-			        </tr>		    	
-			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/15fb9de8/">XUnit2(IEnumerable&lt;FilePath&gt;, XUnit2Settings)</a></td>
-			            <td class="col-md-1">Method</td>
-			            <td class="col-md-8">
-            Runs all xUnit.net v2 tests in the specified assemblies.
-            </td>
-			        </tr>		    	
-			    </tbody>
-			</table>	
-	</div>
-	<!-- Anchor link to section -->
 	<a name="xunit"></a>
 	<div class="panel panel-default">
 		<div class="panel-heading"><b>xUnit</b></div>
@@ -1163,6 +1110,59 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Runs all xUnit.net tests in the specified assemblies.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="xunitv2"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>xUnit v2</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/73842de8/">XUnit2(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Runs all xUnit.net v2 tests in the assemblies matching the specified pattern.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/0dff34ea/">XUnit2(string, XUnit2Settings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Runs all xUnit.net v2 tests in the assemblies matching the specified pattern.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/2390e01b/">XUnit2(IEnumerable&lt;string&gt;)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Runs all xUnit.net v2 tests in the specified assemblies.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/20fd7ebf/">XUnit2(IEnumerable&lt;FilePath&gt;)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Runs all xUnit.net tests in the specified assemblies.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/84a76654/">XUnit2(IEnumerable&lt;string&gt;, XUnit2Settings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Runs all xUnit.net v2 tests in the specified assemblies.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.xunit/465d73c3/15fb9de8/">XUnit2(IEnumerable&lt;FilePath&gt;, XUnit2Settings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Runs all xUnit.net v2 tests in the specified assemblies.
             </td>
 			        </tr>		    	
 			    </tbody>
