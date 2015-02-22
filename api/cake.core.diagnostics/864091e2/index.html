@@ -70,12 +70,10 @@
         <div class="content-container">
           <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
             <div class="page-header">
-              <h2>LogLevel <small></small></h2>
+              <h2>LogLevel <small>Enumeration</small></h2>
             </div>
             <p><ol class="breadcrumb"><li><a href="/api/">API reference</a></li><li><a href="/api/cake.core.diagnostics/">Cake.Core.Diagnostics</a></li><li>LogLevel</li></ol></p>
-            <p><!-- INHERITANCE -->
-
-<!-- SUMMARY -->
+            <p><!-- SUMMARY -->
 	<div class="alert alert-info">
 		<p>
             Represents a log level.
@@ -86,19 +84,61 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><b>Syntax</b></div>
 	<div class="panel-body">
-		<pre><code class="language-cs">public sealed struct LogLevel</code></pre>
+		<pre><code class="language-cs">public enumeration LogLevel</code></pre>
 	</div>
-</div>	
+</div>
 
 <!-- CONSTRUCTOR TABLE -->
-
-<!-- PROPERTY TABLE -->
-
-<!-- METHOD TABLE -->
-
-<!-- OPERATOR TABLE -->
-
-<!-- EXTENSION METHOD TABLE -->
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Members</b></div>
+		<table class="table table-bordered table-striped">
+		    <thead>
+		        <tr>
+		            <th class="col-md-3">Name</th>
+		            <th class="col-md-9">Description</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+			        <tr>
+			            <td>Fatal</td>
+			            <td>
+            Severe errors that cause premature termination.
+            </td>
+			        </tr>
+			        <tr>
+			            <td>Error</td>
+			            <td>
+            Other runtime errors or unexpected conditions.
+            </td>
+			        </tr>
+			        <tr>
+			            <td>Warning</td>
+			            <td>
+            Use of deprecated APIs, poor use of API, 'almost' errors, other runtime 
+            situations that are undesirable or unexpected, but not necessarily "wrong".
+            </td>
+			        </tr>
+			        <tr>
+			            <td>Information</td>
+			            <td>
+            Interesting runtime events.
+            </td>
+			        </tr>
+			        <tr>
+			            <td>Verbose</td>
+			            <td>
+            Detailed information on the flow through the system.
+            </td>
+			        </tr>
+			        <tr>
+			            <td>Debug</td>
+			            <td>
+            Most detailed information.
+            </td>
+			        </tr>
+		    </tbody>
+		</table>
+	</div>
 </p>
           </div>
         </div>
