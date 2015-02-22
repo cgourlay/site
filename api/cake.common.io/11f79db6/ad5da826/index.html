@@ -78,24 +78,39 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Cleans the specified directory.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static void CleanDirectory(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static void CleanDirectory(
        this ICakeContext context,
        DirectoryPath path,
        Func&lt;IFileSystemInfobool&gt; predicate
 )
 </code></pre>
-	</div>
+    </div>
 </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>path</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/38f83116/">DirectoryPath</a><br />The directory path.</dd>
+                    <dt><i>predicate</i></dt>
+                    <dd>Type: Func&lt;<a href="/api/cake.core.io/c3e28b1e/">IFileSystemInfo</a>bool&gt;<br />Predicate used to determine which files/directories should get deleted.</dd>
+                </dl>
+        </div>
+    </div>
+
 
 <!-- EXAMPLE -->
 </p>

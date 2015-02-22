@@ -78,30 +78,45 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Creates a NuGet package using the specified Nuspec file.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static void NuGetPack(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static void NuGetPack(
        this ICakeContext context,
        FilePath nuspecFilePath,
        NuGetPackSettings settings
 )
 </code></pre>
-	</div>
+    </div>
 </div>
 
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>nuspecFilePath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The nuspec file path.</dd>
+                    <dt><i>settings</i></dt>
+                    <dd>Type: <a href="/api/cake.common.tools.nuget.pack/88db3dc2/">NuGetPackSettings</a><br />The settings.</dd>
+                </dl>
+        </div>
+    </div>
+
+
 <!-- EXAMPLE -->
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Example</b></div>
-		<div class="panel-body">
-			<pre><code>var nuGetPackSettings   = new NuGetPackSettings {
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Example</b></div>
+        <div class="panel-body">
+            <pre><code>var nuGetPackSettings   = new NuGetPackSettings {
                                 Id                      = &quot;TestNuget&quot;,
                                 Version                 = &quot;0.0.0.1&quot;,
                                 Title                   = &quot;The tile of the package&quot;,
@@ -126,8 +141,8 @@
                             };
                 
 NuGetPack(&quot;./nuspec/SlackPRTGCommander.nuspec&quot;, nuGetPackSettings);</code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </p>
           </div>
         </div>

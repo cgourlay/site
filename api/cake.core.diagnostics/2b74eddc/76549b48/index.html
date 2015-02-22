@@ -78,26 +78,43 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Writes the text representation of the specified array of objects to the 
             log using the specified verbosity, log level and format information.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public void Write(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public void Write(
        Verbosity verbosity,
        LogLevel level,
        string format,
        Object[] args
 )
 </code></pre>
-	</div>
+    </div>
 </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>verbosity</i></dt>
+                    <dd>Type: <a href="/api/cake.core.diagnostics/f1bad7e9/">Verbosity</a><br />The verbosity.</dd>
+                    <dt><i>level</i></dt>
+                    <dd>Type: <a href="/api/cake.core.diagnostics/864091e2/">LogLevel</a><br />The log level.</dd>
+                    <dt><i>format</i></dt>
+                    <dd>Type: string<br />A composite format string.</dd>
+                    <dt><i>args</i></dt>
+                    <dd>Type: Object[]<br />An array of objects to write using format.</dd>
+                </dl>
+        </div>
+    </div>
+
 
 <!-- EXAMPLE -->
 </p>

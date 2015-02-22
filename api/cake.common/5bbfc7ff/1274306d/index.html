@@ -78,33 +78,53 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Starts the process resource that is specified by the filename.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static int StartProcess(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static int StartProcess(
        this ICakeContext context,
        FilePath fileName
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>fileName</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The file name.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: int<br />
+        The exit code that the started process specified when it terminated.
+    </div>
 </div>
 
 <!-- EXAMPLE -->
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Example</b></div>
-		<div class="panel-body">
-			<pre><code>var exitCodeWithoutArguments = StartProcess(&quot;ping&quot;);
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Example</b></div>
+        <div class="panel-body">
+            <pre><code>var exitCodeWithoutArguments = StartProcess(&quot;ping&quot;);
 // This should output 1 as argument is missing
 Information(&quot;Exit code: {0}&quot;, exitCodeWithoutArguments);</code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </p>
           </div>
         </div>

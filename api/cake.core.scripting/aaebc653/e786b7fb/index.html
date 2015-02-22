@@ -78,24 +78,49 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Processes the specified line.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public abstract bool Process(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public abstract bool Process(
        IScriptProcessor processor,
        ScriptProcessorContext context,
        FilePath currentScriptPath,
        string line
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>processor</i></dt>
+                    <dd>Type: <a href="/api/cake.core.scripting/52491c35/">IScriptProcessor</a><br />The script processor.</dd>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core.scripting/9db760b1/">ScriptProcessorContext</a><br />The script processor context.</dd>
+                    <dt><i>currentScriptPath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The current script path.</dd>
+                    <dt><i>line</i></dt>
+                    <dd>Type: string<br />The line to process.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: bool<br />
+        <code>true</code> if the processor handled the line; otherwise <code>false</code>.
+            
+    </div>
 </div>
 
 <!-- EXAMPLE -->

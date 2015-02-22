@@ -78,24 +78,39 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Zips the specified directory.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public void Zip(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public void Zip(
        DirectoryPath rootPath,
        FilePath outputPath,
        IEnumerable&lt;FilePath&gt; filePaths
 )
 </code></pre>
-	</div>
+    </div>
 </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>rootPath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/38f83116/">DirectoryPath</a><br />The root path.</dd>
+                    <dt><i>outputPath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The output path.</dd>
+                    <dt><i>filePaths</i></dt>
+                    <dd>Type: IEnumerable&lt;<a href="/api/cake.core.io/3181b989/">FilePath</a>&gt;<br />The files to zip.</dd>
+                </dl>
+        </div>
+    </div>
+
 
 <!-- EXAMPLE -->
 </p>

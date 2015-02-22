@@ -78,23 +78,43 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Adds an error reporter for the task to be executed when an exception is thrown from the task.
             This action is invoked before the error handler, but gives no opportunity to recover from the error.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static CakeTaskBuilder&lt;T&gt; ReportError(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static CakeTaskBuilder&lt;T&gt; ReportError(
        this CakeTaskBuilder&lt;T&gt; builder,
        Action&lt;Exception&gt; errorReporter
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>builder</i></dt>
+                    <dd>Type: <a href="/api/cake.core/27fdfbfb/">CakeTaskBuilder&lt;T&gt;</a><br />The builder.</dd>
+                    <dt><i>errorReporter</i></dt>
+                    <dd>Type: Action&lt;Exception&gt;<br />The finally handler.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: <a href="/api/cake.core/27fdfbfb/">CakeTaskBuilder&lt;T&gt;</a><br />
+        The same <a href="/api/cake.core/27fdfbfb/">CakeTaskBuilder&lt;T&gt;</a> instance so that multiple calls can be chained.
+    </div>
 </div>
 
 <!-- EXAMPLE -->

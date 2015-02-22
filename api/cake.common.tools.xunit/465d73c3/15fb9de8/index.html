@@ -78,24 +78,39 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Runs all xUnit.net v2 tests in the specified assemblies.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static void XUnit2(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static void XUnit2(
        this ICakeContext context,
        IEnumerable&lt;FilePath&gt; assemblies,
        XUnit2Settings settings
 )
 </code></pre>
-	</div>
+    </div>
 </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>assemblies</i></dt>
+                    <dd>Type: IEnumerable&lt;<a href="/api/cake.core.io/3181b989/">FilePath</a>&gt;<br />The assemblies.</dd>
+                    <dt><i>settings</i></dt>
+                    <dd>Type: <a href="/api/cake.common.tools.xunit/f078c45a/">XUnit2Settings</a><br />The settings.</dd>
+                </dl>
+        </div>
+    </div>
+
 
 <!-- EXAMPLE -->
 </p>

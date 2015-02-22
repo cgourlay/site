@@ -78,29 +78,49 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Parses project information from a solution file.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static SolutionParserResult ParseSolution(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static SolutionParserResult ParseSolution(
        this ICakeContext context,
        FilePath solutionPath
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>solutionPath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The solution path.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: <a href="/api/cake.common.solution/427621ff/">SolutionParserResult</a><br />
+        A parsed solution.
+    </div>
 </div>
 
 <!-- EXAMPLE -->
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Example</b></div>
-		<div class="panel-body">
-			<pre><code>var solutionPath = &quot;./src/Cake.sln&quot;;
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Example</b></div>
+        <div class="panel-body">
+            <pre><code>var solutionPath = &quot;./src/Cake.sln&quot;;
 Information(&quot;Parsing {0}&quot;, solutionPath);
 var parsedSolution = ParseSolution(solutionPath);
 foreach(var project in parsedSolution.Projects)
@@ -117,8 +137,8 @@ foreach(var project in parsedSolution.Projects)
         project.Type
     );
 }</code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </p>
           </div>
         </div>

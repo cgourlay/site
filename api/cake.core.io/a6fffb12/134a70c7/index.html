@@ -78,22 +78,42 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Enumerates line in file
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static IEnumerable&lt;string&gt; ReadLines(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static IEnumerable&lt;string&gt; ReadLines(
        this IFile file,
        Encoding encoding
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>file</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/9aa5daa2/">IFile</a><br />The file to be read from.</dd>
+                    <dt><i>encoding</i></dt>
+                    <dd>Type: Encoding<br />The encoding that is applied to the content of the file.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: IEnumerable&lt;string&gt;<br />
+        A <i>System.Collections.Generic.IEnumerable`1</i> of file line content
+    </div>
 </div>
 
 <!-- EXAMPLE -->

@@ -78,21 +78,39 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Gets all alias extension methods in the list of assemblies.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static IEnumerable&lt;MethodInfo&gt; FindAliases(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static IEnumerable&lt;MethodInfo&gt; FindAliases(
        IEnumerable&lt;Assembly&gt; assemblies
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>assemblies</i></dt>
+                    <dd>Type: IEnumerable&lt;Assembly&gt;<br />The assemblies.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: IEnumerable&lt;MethodInfo&gt;<br />
+        A list of methods.
+    </div>
 </div>
 
 <!-- EXAMPLE -->

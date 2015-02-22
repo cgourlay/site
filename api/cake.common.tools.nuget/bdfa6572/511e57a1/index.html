@@ -78,35 +78,50 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Installs NuGet packages using the specified package configuration and settings.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static void NuGetInstallFromConfig(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static void NuGetInstallFromConfig(
        this ICakeContext context,
        FilePath packageConfigPath,
        NuGetInstallSettings settings
 )
 </code></pre>
-	</div>
+    </div>
 </div>
 
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>packageConfigPath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The package configuration to install.</dd>
+                    <dt><i>settings</i></dt>
+                    <dd>Type: <a href="/api/cake.common.tools.nuget.install/babcb33c/">NuGetInstallSettings</a><br />The settings.</dd>
+                </dl>
+        </div>
+    </div>
+
+
 <!-- EXAMPLE -->
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Example</b></div>
-		<div class="panel-body">
-			<pre><code>NuGetInstall(&quot;./tools/packages.config&quot;, new NuGetInstallSettings {
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Example</b></div>
+        <div class="panel-body">
+            <pre><code>NuGetInstall(&quot;./tools/packages.config&quot;, new NuGetInstallSettings {
     ExcludeVersion  = true,
     OutputDirectory = &quot;./tools&quot;
     });</code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </p>
           </div>
         </div>

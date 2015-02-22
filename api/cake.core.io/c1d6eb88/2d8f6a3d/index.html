@@ -78,22 +78,42 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Starts a process using the specified information.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public IProcess Start(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public IProcess Start(
        FilePath filePath,
        ProcessSettings settings
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>filePath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The file name such as an application or document with which to start the process.</dd>
+                    <dt><i>settings</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/fbbd6704/">ProcessSettings</a><br />The information about the process to start.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: <a href="/api/cake.core.io/ad8a9b8b/">IProcess</a><br />
+        A process handle.
+    </div>
 </div>
 
 <!-- EXAMPLE -->

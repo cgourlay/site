@@ -78,23 +78,41 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Generates a script method alias from the specified method.
             The provided method must be an extension method for <a href="/api/cake.core/f005e67e/">ICakeContext</a>
             and it must be decorated with the <a href="/api/cake.core.annotations/8283ce29/">CakeMethodAliasAttribute</a>.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static string Generate(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static string Generate(
        MethodInfo method
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>method</i></dt>
+                    <dd>Type: MethodInfo<br />The method to generate the code for.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: string<br />
+        The generated code.
+    </div>
 </div>
 
 <!-- EXAMPLE -->

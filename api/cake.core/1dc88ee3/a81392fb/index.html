@@ -78,23 +78,43 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Adds a criteria that has to be fulfilled for the task to run.
             The criteria is evaluated when traversal of the graph occurs.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static CakeTaskBuilder&lt;T&gt; WithCriteria(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static CakeTaskBuilder&lt;T&gt; WithCriteria(
        this CakeTaskBuilder&lt;T&gt; builder,
        Func&lt;bool&gt; criteria
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>builder</i></dt>
+                    <dd>Type: <a href="/api/cake.core/27fdfbfb/">CakeTaskBuilder&lt;T&gt;</a><br />The task builder.</dd>
+                    <dt><i>criteria</i></dt>
+                    <dd>Type: Func&lt;bool&gt;<br />The criteria.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: <a href="/api/cake.core/27fdfbfb/">CakeTaskBuilder&lt;T&gt;</a><br />
+        The same <a href="/api/cake.core/27fdfbfb/">CakeTaskBuilder&lt;T&gt;</a> instance so that multiple calls can be chained.
+    </div>
 </div>
 
 <!-- EXAMPLE -->

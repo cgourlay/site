@@ -78,38 +78,60 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Gets an argument and returns the provided <i>defaultValue</i> if the argument is missing.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static T Argument(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static T Argument(
        this ICakeContext context,
        string name,
        T defaultValue
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>name</i></dt>
+                    <dd>Type: string<br />The argument name.</dd>
+                    <dt><i>defaultValue</i></dt>
+                    <dd>Type: T<br />The value to return if the argument is missing.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: T<br />
+        The value of the argument if it exist; otherwise <i>defaultValue</i>.
+    </div>
 </div>
 
 <!-- EXAMPLE -->
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Example</b></div>
-		<div class="panel-body">
-			<pre><code>//Cake.exe .\argument.cake -myArgument=&quot;is valid&quot; -loopCount = 5
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Example</b></div>
+        <div class="panel-body">
+            <pre><code>//Cake.exe .\argument.cake -myArgument=&quot;is valid&quot; -loopCount = 5
 Information(&quot;Argument {0}&quot;, Argument&lt;string&gt;(&quot;myArgument&quot;, &quot;is NOT valid&quot;));
 var loopCount = Argument&lt;int&gt;(&quot;loopCount&quot;, 10);
 for(var index = 0;index&lt;loopCount; index++)
 {
     Information(&quot;Index {0}&quot;, index);
 }</code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </p>
           </div>
         </div>

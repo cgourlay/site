@@ -37,6 +37,21 @@ pre {
   font-size: 21px;
 }
 
+dl {
+  margin-bottom: 0px !important;
+}
+
+dt {
+  font-weight: 400;
+}
+
+dt:not(:first-child) {
+    margin-top: 15px;
+}
+
+dd {
+  margin-left: 20px;
+}
 
 .table > thead > tr > th,
 .table > tbody > tr > td {

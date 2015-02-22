@@ -78,30 +78,45 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Pushes a NuGet package to a NuGet server and publishes it.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static void NuGetPush(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static void NuGetPush(
        this ICakeContext context,
        FilePath packageFilePath,
        NuGetPushSettings settings
 )
 </code></pre>
-	</div>
+    </div>
 </div>
 
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>context</i></dt>
+                    <dd>Type: <a href="/api/cake.core/f005e67e/">ICakeContext</a><br />The context.</dd>
+                    <dt><i>packageFilePath</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/3181b989/">FilePath</a><br />The <code>.nupkg</code> file path.</dd>
+                    <dt><i>settings</i></dt>
+                    <dd>Type: <a href="/api/cake.common.tools.nuget.push/bcd6313b/">NuGetPushSettings</a><br />The settings.</dd>
+                </dl>
+        </div>
+    </div>
+
+
 <!-- EXAMPLE -->
-	<div class="panel panel-default">
-		<div class="panel-heading"><b>Example</b></div>
-		<div class="panel-body">
-			<pre><code>// Get the path to the package.
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Example</b></div>
+        <div class="panel-body">
+            <pre><code>// Get the path to the package.
 var package = &quot;./nuget/SlackPRTGCommander.0.0.1.nupkg&quot;;
             
 // Push the package.
@@ -109,8 +124,8 @@ NuGetPush(package, new NuGetPushSettings {
     Source = &quot;http://example.com/nugetfeed&quot;,
     ApiKey = &quot;4003d786-cc37-4004-bfdf-c4f3e8ef9b3a&quot;
 }); </code></pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </p>
           </div>
         </div>

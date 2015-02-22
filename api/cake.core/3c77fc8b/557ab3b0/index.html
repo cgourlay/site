@@ -78,24 +78,48 @@
             <p><!-- INHERITANCE -->
 
 <!-- SUMMARY -->
-	<div class="alert alert-info">
-		<p>
+    <div class="alert alert-info">
+        <p>
             Gets files matching the specified filter and scope.
             </p>
-	</div>
+    </div>
 
 <!-- SYNTAX -->
 <div class="panel panel-default">
-	<div class="panel-heading"><b>Syntax</b></div>
-	<div class="panel-body">
-		<pre><code class="language-cs">public static IEnumerable&lt;IFile&gt; GetFiles(
+    <div class="panel-heading"><b>Syntax</b></div>
+    <div class="panel-body">
+        <pre><code class="language-cs">public static IEnumerable&lt;IFile&gt; GetFiles(
        this IDirectory directory,
        string filter,
        SearchScope scope,
        Func&lt;IFileSystemInfobool&gt; predicate
 )
 </code></pre>
-	</div>
+    </div>
+</div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><b>Parameters</b></div>
+        <div class="panel-body">
+            <dl>
+                    <dt><i>directory</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/452cdee5/">IDirectory</a><br />The directory.</dd>
+                    <dt><i>filter</i></dt>
+                    <dd>Type: string<br />The filter.</dd>
+                    <dt><i>scope</i></dt>
+                    <dd>Type: <a href="/api/cake.core.io/ec85f3cc/">SearchScope</a><br />The search scope.</dd>
+                    <dt><i>predicate</i></dt>
+                    <dd>Type: Func&lt;<a href="/api/cake.core.io/c3e28b1e/">IFileSystemInfo</a>bool&gt;<br />Predicate used to filter files based on file system information.</dd>
+                </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading"><b>Return value</b></div>
+    <div class="panel-body">
+        Type: IEnumerable&lt;<a href="/api/cake.core.io/9aa5daa2/">IFile</a>&gt;<br />
+        The files matching the specified filter, scope and predicate.
+    </div>
 </div>
 
 <!-- EXAMPLE -->
