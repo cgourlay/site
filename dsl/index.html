@@ -87,13 +87,16 @@
 	    	<a class="list-group-item" href="#globbing">Globbing</a>
 	    	<a class="list-group-item" href="#ilmerge">ILMerge</a>
 	    	<a class="list-group-item" href="#logging">Logging</a>
+	    	<a class="list-group-item" href="#misc">Misc</a>
 	    	<a class="list-group-item" href="#msbuild">MSBuild</a>
 	    	<a class="list-group-item" href="#msbuildresource">MSBuild Resource</a>
 	    	<a class="list-group-item" href="#mstest">MSTest</a>
+	    	<a class="list-group-item" href="#nsis">NSIS</a>
 	    	<a class="list-group-item" href="#nuget">NuGet</a>
 	    	<a class="list-group-item" href="#nunit">NUnit</a>
 	    	<a class="list-group-item" href="#process">Process</a>
 	    	<a class="list-group-item" href="#releasenotes">Release Notes</a>
+	    	<a class="list-group-item" href="#security">Security</a>
 	    	<a class="list-group-item" href="#signing">Signing</a>
 	    	<a class="list-group-item" href="#text">Text</a>
 	    	<a class="list-group-item" href="#wix">WiX</a>
@@ -180,7 +183,7 @@
 			            <td class="col-md-3"><a href="/api/cake.common.build/175bec7e/780ea066/">AppVeyor</a></td>
 			            <td class="col-md-1">Property</td>
 			            <td class="col-md-8">
-            Gets a <i>Cake.Common.Build.AppVeyor</i> instance that can
+            Gets a <a href="/api/cake.common.build.appveyor/855a6067/">AppVeyorProvider</a> instance that can
             be used to manipulate the AppVeyor environment.
             </td>
 			        </tr>		    	
@@ -339,6 +342,22 @@
 			        </tr>		    	
 			    </tbody>
 			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Exists</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/11f79db6/e5244bf2/">DirectoryExists(DirectoryPath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Determines whether the given path refers to an existing directory.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
 	</div>
 	<!-- Anchor link to section -->
 	<a name="environment"></a>
@@ -439,6 +458,22 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Deletes the specified file.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Exists</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.io/0589fca9/037b91d5/">FileExists(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Determines whether the given path refers to an existing file.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -590,6 +625,45 @@
 			</table>	
 	</div>
 	<!-- Anchor link to section -->
+	<a name="misc"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Misc</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.cake/9c701d7f/4139982e/">CakeExecuteScript(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Executes cake script out of process
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.cake/9c701d7f/f9b6ab19/">CakeExecuteScript(FilePath, CakeSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Executes cake script out of process
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.cake/9c701d7f/8fe820d8/">CakeExecuteExpression(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Executes Cake expression out of process
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.cake/9c701d7f/b987884e/">CakeExecuteExpression(string, CakeSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Executes Cake expression out of process
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
 	<a name="msbuild"></a>
 	<div class="panel panel-default">
 		<div class="panel-heading"><b>MSBuild</b></div>
@@ -623,6 +697,13 @@
 			<table class="table table-bordered table-striped">
 			    <tbody>
 			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.solution/430dd96d/0d6515cf/">ParseSolution(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Parses project information from a solution file.
+            </td>
+			        </tr>		    	
+			        <tr>
 			            <td class="col-md-3"><a href="/api/cake.common.solution.project/65286dc8/25578715/">ParseProject(FilePath)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
@@ -630,10 +711,17 @@
             </td>
 			        </tr>		    	
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.solution/430dd96d/0d6515cf/">ParseSolution(FilePath)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.solution.project.xmldoc/8ae3ebd4/954745c0/">ParseXmlDocExampleCode(FilePath)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Parses project information from a solution file.
+            Parses Xml documentation example code from given path.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.solution.project.xmldoc/8ae3ebd4/b5c52fda/">ParseXmlDocFilesExampleCode(string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Parses Xml documentation example code from file(s) using given pattern.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -673,6 +761,34 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Runs all MSTest unit tests in the specified assemblies.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="nsis"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>NSIS</b></div>
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">MakeNSIS</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nsis/d7b6dfeb/ade42826/">MakeNSIS(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Compiles the given NSIS script using the default settings.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nsis/d7b6dfeb/ccdb92a0/">MakeNSIS(FilePath, MakeNSISSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Compiles the given NSIS script using the given <i>settings</i>.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -863,7 +979,8 @@
 			            <td class="col-md-3"><a href="/api/cake.common.tools.nunit/360907a2/e6f94862/">NUnit(string, NUnitSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Runs all NUnit unit tests in the assemblies matching the specified pattern.
+            Runs all NUnit unit tests in the assemblies matching the specified pattern, 
+            using the specified settings.
             </td>
 			        </tr>		    	
 			        <tr>
@@ -884,14 +1001,16 @@
 			            <td class="col-md-3"><a href="/api/cake.common.tools.nunit/360907a2/5f90b85c/">NUnit(IEnumerable&lt;string&gt;, NUnitSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Runs all NUnit unit tests in the specified assemblies.
+            Runs all NUnit unit tests in the specified assemblies, 
+            using the specified settings.
             </td>
 			        </tr>		    	
 			        <tr>
 			            <td class="col-md-3"><a href="/api/cake.common.tools.nunit/360907a2/12a6e051/">NUnit(IEnumerable&lt;FilePath&gt;, NUnitSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Runs all NUnit unit tests in the specified assemblies.
+            Runs all NUnit unit tests in the specified assemblies, 
+            using the specified settings.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -918,6 +1037,11 @@
 			            <td class="col-md-8">
             Starts the process resource that is specified by the filename and settings.
             </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common/5bbfc7ff/274af7ee/">StartProcess(FilePath, ProcessSettings, out IEnumerable)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8"></td>
 			        </tr>		    	
 			    </tbody>
 			</table>	
@@ -948,6 +1072,31 @@
 			</table>	
 	</div>
 	<!-- Anchor link to section -->
+	<a name="security"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Security</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.security/7a665911/c3b0da2a/">CalculateFileHash(FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Calculates the hash for a given file using the default (SHA256) algorithm.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.security/7a665911/5577db0a/">CalculateFileHash(FilePath, HashAlgorithm)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Calculates the hash for a given file.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
 	<a name="signing"></a>
 	<div class="panel panel-default">
 		<div class="panel-heading"><b>Signing</b></div>
@@ -956,31 +1105,31 @@
 			<table class="table table-bordered table-striped">
 			    <tbody>
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool.sign/341f78d7/ecc82540/">Sign(string, SignToolSignSettings)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool/c8840762/989d162f/">Sign(string, SignToolSignSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Signs the specified assembly
+            Signs the specified assembly.
             </td>
 			        </tr>		    	
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool.sign/341f78d7/9e9ed2f7/">Sign(FilePath, SignToolSignSettings)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool/c8840762/a15abf2e/">Sign(FilePath, SignToolSignSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Signs the specified assembly
+            Signs the specified assembly.
             </td>
 			        </tr>		    	
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool.sign/341f78d7/7e420bf8/">Sign(IEnumerable&lt;string&gt;, SignToolSignSettings)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool/c8840762/8563c0e2/">Sign(IEnumerable&lt;string&gt;, SignToolSignSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Signs the specified assemblies
+            Signs the specified assemblies.
             </td>
 			        </tr>		    	
 			        <tr>
-			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool.sign/341f78d7/7bcf47fb/">Sign(IEnumerable&lt;FilePath&gt;, SignToolSignSettings)</a></td>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.signtool/c8840762/09da7eb9/">Sign(IEnumerable&lt;FilePath&gt;, SignToolSignSettings)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
-            Signs the specified assemblies
+            Signs the specified assemblies.
             </td>
 			        </tr>		    	
 			    </tbody>
