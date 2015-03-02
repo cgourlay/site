@@ -102,6 +102,7 @@
 	    	<a class="list-group-item" href="#signing">Signing</a>
 	    	<a class="list-group-item" href="#text">Text</a>
 	    	<a class="list-group-item" href="#wix">WiX</a>
+	    	<a class="list-group-item" href="#xml">XML</a>
 	    	<a class="list-group-item" href="#xunit">xUnit</a>
 	    	<a class="list-group-item" href="#xunitv2">xUnit v2</a>
 	</ul>	    
@@ -961,6 +962,29 @@
 			        </tr>		    	
 			    </tbody>
 			</table>	
+			<!-- DSL SUB CATEGORIES -->
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">SetApiKey</li>
+				</ul>
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/9265aaa0/">NuGetSetApiKey(string, string, NuGetSetApiKeySettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Installs NuGet packages using the specified API key, source and settings.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.tools.nuget/bdfa6572/3bd38135/">NuGetSetApiKey(string, string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Installs NuGet packages using the specified API key and source.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
 	</div>
 	<!-- Anchor link to section -->
 	<a name="nunit"></a>
@@ -1153,10 +1177,24 @@
             </td>
 			        </tr>		    	
 			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/48145e1f/">TransformText(string, string, string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Creates a text transformation from the provided template, using the specified placeholder.
+            </td>
+			        </tr>		    	
+			        <tr>
 			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/3af41228/">TransformTextFile(FilePath)</a></td>
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Creates a text transformation from the provided template on disc.
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.text/5e93c90a/66eaeb04/">TransformTextFile(FilePath, string, string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Creates a text transformation from the provided template on disc, using the specified placeholder.
             </td>
 			        </tr>		    	
 			    </tbody>
@@ -1208,6 +1246,45 @@
 			            <td class="col-md-1">Method</td>
 			            <td class="col-md-8">
             Links all <code>.wixobj</code> files in the provided object files.
+            </td>
+			        </tr>		    	
+			    </tbody>
+			</table>	
+	</div>
+	<!-- Anchor link to section -->
+	<a name="xml"></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>XML</b></div>
+			<!-- DSL SUB CATEGORIES -->
+			<!-- DSL METHODS -->
+			<table class="table table-bordered table-striped">
+			    <tbody>
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.xml/89d7d1b8/976a754f/">XmlTransform(string, string)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Performs XML XSL transformation
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.xml/89d7d1b8/eb3e401b/">XmlTransform(string, string, XmlTransformationSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Performs XML XSL transformation
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.xml/89d7d1b8/f73ad590/">XmlTransform(FilePath, FilePath, FilePath)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Performs XML XSL transformation
+            </td>
+			        </tr>		    	
+			        <tr>
+			            <td class="col-md-3"><a href="/api/cake.common.xml/89d7d1b8/a7e61cb0/">XmlTransform(FilePath, FilePath, FilePath, XmlTransformationSettings)</a></td>
+			            <td class="col-md-1">Method</td>
+			            <td class="col-md-8">
+            Performs XML XSL transformation
             </td>
 			        </tr>		    	
 			    </tbody>
