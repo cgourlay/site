@@ -11,7 +11,7 @@
     <link rel="icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 
-    <title>Cake Build - How does it work?</title>
+    <title>Cake Build - Criterias</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/jumbotron-narrow.css" rel="stylesheet">
@@ -60,119 +60,42 @@
         <!-- Sidebar -->
         <div class="col-sm-3 col-md-3 sidebar">   
           <ul class="nav nav-sidebar">
-<li><a href="/">Welcome to Cake!</a></li><li><a href="/introduction">Introduction</a></li><li class="active"><a href="/how-does-it-work">How does it work?</a></li><li><a href="/getting-started">Getting started</a></li><li><a href="/contributors">Contributors</a></li><li><a href="/contribution-guidelines">Contribution guidelines</a></li><li><a href="/appveyor-integration">AppVeyor Integration</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
+<li><a href="/">Start</a></li><li><a href="/what-is-cake">What is Cake?</a></li><li><a href="/getting-started">Getting started</a></li><li class="active"><a href="/documentation">Documentation</a><ul>
+<li class="list-unstyled"><a href="/documentation/tasks">Tasks</a></li><li class="list-unstyled"><a href="/documentation/dependencies">Dependencies</a></li><li class="list-unstyled"><b><a href="/documentation/criterias">Criterias</a></b></li><li class="list-unstyled"><a href="/documentation/error-handling">Error handling</a></li><li class="list-unstyled"><a href="/documentation/error-reporting">Error reporting</a></li><li class="list-unstyled"><a href="/documentation/finally-block">Finally block</a></li><li class="list-unstyled"><a href="/documentation/setup-and-teardown">Setup and teardown</a></li><li class="list-unstyled"><a href="/documentation/running-targets">Running targets</a></li><li class="list-unstyled"><a href="/documentation/script-aliases">Script aliases</a></li></ul>
+</li><li><a href="/addins">Addins</a></li><li><a href="/contribute">Contribute</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
 
         </div>
 
         <!-- Container -->
         <div class="content-container">
           <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
-            <div class="page-header">
-              <h2>How does it work? <small></small></h2>
-            </div>
-            <p></p>
-            <p>
-Cake uses a <a href="http://martinfowler.com/articles/rake.html#DependencyBasedProgramming">dependency based programming</a> model just like Rake, FAKE and similar build automation systems where you declare tasks and the dependencies between those.
-
-<!-- TASKS -->
-<h3>Tasks</h3>
-<p>To define a new task, use the <code>Task</code>-method.</p>
-
-<pre><code class="language-cs">Task("A")
-  .Does(() =>
-{
-});
-
-RunTarget("A");
-</code></pre>
-
-<!-- DEPENDENCIES -->
-<h3>Dependencies</h3>
-<p>To add a dependency on another task, use the <code>IsDependentOn</code>-method.</p>
-
-<pre><code class="language-cs">Task("A")
-  .Does(() =>
-{
-});
-
-Task("B")
-  .IsDependentOn("A");
-  .Does(() =>
-{
-});
-
-RunTarget("B");
-</code></pre>
-
-<p>This will first execute target <code>A</code> and then <code>B</code> as expected.</p>
-
-<!-- CRITERIAS -->
-<h3>Criterias</h3>
-<p>You can also control the flow by providing <code>criterias</code>. A criteria is a predicate that has to be fulfilled for the task to execute. The criteria does not affect however succeeding task will be executed.</p>
-
-<pre><code class="language-cs">Task("A")
+            <div class="col-sm-12 col-md-8 col-lg-6">
+              <div class="page-header">
+                <h2>Criterias <small></small></h2>
+              </div>
+              <p><ol class="breadcrumb"><li><a href="/documentation/">Documentation</a></li><li>Criterias</li></ol></p>
+              
+                <p><p>You can also control the flow by providing criterias. A criteria is a predicate that has to be fulfilled for the task to execute. The criteria does not affect however succeeding task will be executed.</p>
+<pre><code>Task(&quot;A&quot;)
    .WithCriteria(DateTime.Now.Second % 2 == 0)
-   .Does(() =>
+   .Does(() =&gt;
 {
 });
 
-Task("B")
-  .WithCriteria(() => DateTime.Now.Second % 2 == 0)
-  .IsDependentOn("A");
-  .Does(() =>
+Task(&quot;B&quot;)
+  .WithCriteria(() =&gt; DateTime.Now.Second % 2 == 0)
+  .IsDependentOn(&quot;A&quot;);
+  .Does(() =&gt;
 {
 });
 
-RunTarget("B");
+RunTarget(&quot;B&quot;);
 </code></pre>
 
 <p>Task <code>A</code>'s criteria will be set when the task is created while Task <code>B</code>'s criteria will be evaluated when the task is being executed.</p>
-
 <p>For criterias with states that might change during the execution of the build script, consider using the lambda alternative.</p>
-
-<!-- ERROR HANDLING -->
-<h3>Error Handling</h3>
-
-<p>In order to act on an error thrown from an individual task, you can use the <code>OnError</code> task extension. 
-This will give you the opportunity to act on the error. If you want the error to propagate as normal, you can rethrow the exception.</p>
-
-<pre><code class="language-cs">Task("A")
-  .Does(() =>
-{
-})
-.OnError(exception =>
-{
-   // Handle the error here.
-});
-</code></pre>
-
-<p>To automatically swallow errors that occur in a task, you can use the <code>ContinueOnError</code> task extension.
-The <code>ContinueOnError</code> extension cannot be combined with <code>OnError</code>.</p>
-
-<pre><code class="language-cs">Task("A")
-   .ContinueOnError()
-   .Does(() =>
-{
-});
-</code></pre>
-
-<!-- SETUP AND TEARDOWN -->
-<h3>Setup and Teardown</h3>
-
-<p>If you want to do something before the first or after the last task has been run, you can use <code>Setup</code> and <code>Teardown</code>. A use case for this might be when you need to start some kind of server and want to make sure it gets teared down properly.</p>
-
-<pre><code class="language-cs">Setup(() =>
-{
-   // Executed BEFORE the first task.  	
-});
-
-Teardown(() =>
-{
-   // Executed AFTER the last task.  	
-});
-</code></pre>
-
-<p>Setup will only be called if a call to <code>RunTarget</code> is made and the dependency graph is correct. If Cake doesn't run any tasks, neither <code>Setup</code> or <code>Teardown</code> will be called.</p></p>
+</p>            
+            </div>
           </div>
         </div>
 

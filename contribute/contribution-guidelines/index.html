@@ -60,73 +60,50 @@
         <!-- Sidebar -->
         <div class="col-sm-3 col-md-3 sidebar">   
           <ul class="nav nav-sidebar">
-<li><a href="/">Welcome to Cake!</a></li><li><a href="/introduction">Introduction</a></li><li><a href="/how-does-it-work">How does it work?</a></li><li><a href="/getting-started">Getting started</a></li><li><a href="/contributors">Contributors</a></li><li class="active"><a href="/contribution-guidelines">Contribution guidelines</a></li><li><a href="/appveyor-integration">AppVeyor Integration</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
+<li><a href="/">Start</a></li><li><a href="/what-is-cake">What is Cake?</a></li><li><a href="/getting-started">Getting started</a></li><li><a href="/documentation">Documentation</a></li><li><a href="/addins">Addins</a></li><li class="active"><a href="/contribute">Contribute</a><ul>
+<li class="list-unstyled"><a href="/contribute/list-of-contributors">List of contributors</a></li><li class="list-unstyled"><b><a href="/contribute/contribution-guidelines">Contribution guidelines</a></b></li></ul>
+</li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
 
         </div>
 
         <!-- Container -->
         <div class="content-container">
           <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
-            <div class="page-header">
-              <h2>Contribution guidelines <small></small></h2>
-            </div>
-            <p></p>
-            <p>
-<!-- INTRODUCTION -->
-<h3>Introduction</h3>
-
-So you're thinking about contributing to Cake? Great! It's <b>really</b> appreciated.
-
-<!-- WHERE TO START -->
+            <div class="col-sm-12 col-md-8 col-lg-6">
+              <div class="page-header">
+                <h2>Contribution guidelines <small></small></h2>
+              </div>
+              <p><ol class="breadcrumb"><li><a href="/contribute/">Contribute</a></li><li>Contribution guidelines</li></ol></p>
+              
+                <p><p>So you're thinking about contributing to Cake? Great! <strong>It's really appreciated.</strong></p>
 <h3>Where to start?</h3>
-
-<p>Start by either suggest a feature in the <a href="https://github.com/cake-build/cake/issues">issue list</a> that you want to see in Cake, or assign yourself to an existing feature/bug. Make sure that no one else is working on it already though. It's also appreciated to have some kind of discussion about the issue if it's not an easy fix, to make sure that it's later.</p>
-
+<p>Start by either suggest a feature in the issue list that you want to see in Cake, or assign yourself to an existing feature/bug. Make sure that no one else is working on it already though. It's also appreciated to have some kind of discussion about the issue if it's not an easy fix.</p>
 <p>If your suggestion applies to a broad range of users and scenarios, it will be considered for inclusion in the core Cake assemblies.</p>
-
 <p>Make sure that your contribution follows this contribution guide.</p>
-
-<!-- CODING -->
+<h3>Branches</h3>
+<p>Do your work in feature branches based on <code>develop</code>. <code>develop</code> is the main development branch in Hadouken and is where all code is pushed before making a release.</p>
 <h3>Coding</h3>
-
-<!-- DEPENDENCIES -->
+<p>Normal .NET coding guidelines apply. See the <a href="https://msdn.microsoft.com/en-us/library/ms229042%28v=vs.110%29.aspx">Framework Design Guidelines</a> for more information.</p>
 <h4>Dependencies</h4>
-
-<p>The assemblies `Cake.Core` and `Cake.Common` should have no dependencies except the .NET BCL library.</p>
-
-<p>Dependencies for `Cake` executable is acceptable in specific circumstances. If you want to introduce a dependency to the Cake executable, make sure you bring it up in the issue.</p>
-
-<!-- UNIT TESTS -->
+<p>The assemblies <code>Cake.Core</code> and <code>Cake.Common</code> should have no dependencies except the .NET BCL library.</p>
+<p>Dependencies for the Cake executable is acceptable in specific circumstances. If you want to introduce a dependency to the Cake executable, make sure you bring it up in an issue or a pull request, so it can be properly discussed.</p>
 <h4>Unit Tests</h4>
-
 <p>Make sure to run all unit tests before creating a pull request. You code should also have reasonable unit test coverage.</p>
-
-<!-- DOCUMENTATION -->
-<h4>Documentation</h4>
-
-<p>If your contribution change behavior or adds new functionality, it's really appreciated (but not mandatory) to update the documentation at <a href="https://github.com/cake-build/documentation">https://github.com/cake-build/documentation</a>.</p>
-
-<!-- CODING STANDARDS -->
-<h4>Coding Standards</h4>
-
-<p>Normal .NET coding guidelines apply. See the <a href="http://msdn.microsoft.com/en-us/library/ms229042.aspx">Framework Design Guidelines</a> for suggestions.</p>
-
-<p>If you have access to ReSharper, your code should have no ReSharper warnings or errors with the default settings.</p>
-
-<!-- SUBMITTING -->
-<h4>Submitting</h4>
-
-<p>When your contribution is ready, send a pull request. Bonus for topic branches.</p>
-
-<!-- LICENSE -->
+<h3>Submitting a pull request</h3>
+<ul>
+<li>Pull requests should be tagged with <code>[WIP]</code> in the title if not finished already. This can also be done to provide discussion of a planned pull request before starting work.</li>
+<li>Include as much detail as possible in the description, such as if the pull request solves a reported issue or implements a specific feature.</li>
+</ul>
 <h3>License</h3>
-
 <p>By contributing to Cake, you assert that:</p>
-<ol>
-	<li>The contribution is your own original work.</li>
-	<li>You have the right to assign the copyright for the work (it is not owned by your employer, or you have been given copyright assignment in writing).</li>
-	<li>You license it under the terms applied to the rest of the Cake project.</li>
-</ol></p>
+<ul>
+<li>The contribution is your own original work.</li>
+<li>You have the right to assign the copyright for the work (it is not owned by your employer, or
+  you have been given copyright assignment in writing).</li>
+<li>You license it under the terms applied to the rest of the Cake project.</li>
+</ul>
+</p>            
+            </div>
           </div>
         </div>
 

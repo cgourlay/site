@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Patrik Svensson">
+    <meta name="generator" content="Sparrow">
+    <meta name="keywords" content="" />
+    <link rel="icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+    <title>Cake Build - Script aliases</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="/css/cake.css" rel="stylesheet">
+
+    <script src="/js/highlight.pack.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Cake Build</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/cake-build/cake"><i class="fa fa-github"></i> Source Code</a></li>
+            <li><a href="https://github.com/cake-build/cake/releases"><i class="fa fa-cloud-download"></i> Download</a></li>
+            <li><a href="/dsl/"><i class="fa fa-book"></i> DSL Reference</a></li>
+            <li><a href="/api/"><i class="fa fa-book"></i> API Reference</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-sm-3 col-md-3 sidebar">   
+          <ul class="nav nav-sidebar">
+<li><a href="/">Start</a></li><li><a href="/what-is-cake">What is Cake?</a></li><li><a href="/getting-started">Getting started</a></li><li class="active"><a href="/documentation">Documentation</a><ul>
+<li class="list-unstyled"><a href="/documentation/tasks">Tasks</a></li><li class="list-unstyled"><a href="/documentation/dependencies">Dependencies</a></li><li class="list-unstyled"><a href="/documentation/criterias">Criterias</a></li><li class="list-unstyled"><a href="/documentation/error-handling">Error handling</a></li><li class="list-unstyled"><a href="/documentation/error-reporting">Error reporting</a></li><li class="list-unstyled"><a href="/documentation/finally-block">Finally block</a></li><li class="list-unstyled"><a href="/documentation/setup-and-teardown">Setup and teardown</a></li><li class="list-unstyled"><a href="/documentation/running-targets">Running targets</a></li><li class="list-unstyled"><b><a href="/documentation/script-aliases">Script aliases</a></b></li></ul>
+</li><li><a href="/addins">Addins</a></li><li><a href="/contribute">Contribute</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
+
+        </div>
+
+        <!-- Container -->
+        <div class="content-container">
+          <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+            <div class="col-sm-12 col-md-8 col-lg-6">
+              <div class="page-header">
+                <h2>Script aliases <small></small></h2>
+              </div>
+              <p><ol class="breadcrumb"><li><a href="/documentation/">Documentation</a></li><li>Script aliases</li></ol></p>
+              
+                <p><h3>What is a script alias?</h3>
+<p>Cake supports something called script aliases. Script aliases are convenience methods that are easily accessible directly from a Cake script. Every single <a href="/dsl">DSL method</a> in Cake is implemented like an alias method.</p>
+<pre><code>Task(&quot;Clean&quot;)
+   .Does(() =&gt;
+{
+    // Delete a file.
+    DeleteFile(&quot;./file.txt&quot;);
+
+    // Clean a directory.
+    CleanDirectory(&quot;./temp&quot;);
+});
+</code></pre>
+
+<h3>Creating an alias</h3>
+<p>Start by creating a new class library project and add a reference to the <code>Cake.Core</code> NuGet package via the package manager.</p>
+<p>PM&gt; Install-Package Cake.Core</p>
+<p>Add the alias method that you want to expose to your Cake script. A script alias method is simply an extension method for <code>ICakeContext</code> that's been marked with the <code>CakeMethodAlias</code> attribute.</p>
+<p>You could also add an script alias property, which works the same way as a script alias method, except that it accepts no arguments and is marked with the <code>CakePropertyAlias</code> attribute.</p>
+<pre><code>using Cake.Core;
+using Cake.Core.Annotations;
+
+public static class MyCakeExtension
+{
+   [CakeMethodAlias]
+   public static int GetNumber(this ICakeContext context, bool value)
+   {
+      return value? int.MinValue : int.MaxValue;
+   }
+
+   [CakePropertyAlias]
+   public static int TheAnswerToLife(this ICakeContext context)
+   {
+      return 42;
+   }
+}
+</code></pre>
+
+<h3>Using the alias</h3>
+<p>Compile the assembly and add a reference to it in the build script via the #r directive.</p>
+<pre><code>#r &quot;tools/MyCakeExtension.dll&quot;
+</code></pre>
+
+<p>Now you should be able to call the method from the script.</p>
+<pre><code>Task(&quot;GetSomeAnswers&quot;)
+   .Does(() =&gt;
+{
+    // Write the values to the console. 
+    Information(&quot;Magic number: {0}&quot;, GetMagicNumber(false));
+    Information(&quot;The answer to life: {0}&quot;, TheAnswerToLife);
+});
+</code></pre>
+
+</p>            
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

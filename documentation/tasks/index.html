@@ -11,7 +11,7 @@
     <link rel="icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 
-    <title>Cake Build - Introduction</title>
+    <title>Cake Build - Tasks</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/jumbotron-narrow.css" rel="stylesheet">
@@ -60,25 +60,31 @@
         <!-- Sidebar -->
         <div class="col-sm-3 col-md-3 sidebar">   
           <ul class="nav nav-sidebar">
-<li><a href="/">Welcome to Cake!</a></li><li class="active"><a href="/introduction">Introduction</a></li><li><a href="/how-does-it-work">How does it work?</a></li><li><a href="/getting-started">Getting started</a></li><li><a href="/contributors">Contributors</a></li><li><a href="/contribution-guidelines">Contribution guidelines</a></li><li><a href="/appveyor-integration">AppVeyor Integration</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
+<li><a href="/">Start</a></li><li><a href="/what-is-cake">What is Cake?</a></li><li><a href="/getting-started">Getting started</a></li><li class="active"><a href="/documentation">Documentation</a><ul>
+<li class="list-unstyled"><b><a href="/documentation/tasks">Tasks</a></b></li><li class="list-unstyled"><a href="/documentation/dependencies">Dependencies</a></li><li class="list-unstyled"><a href="/documentation/criterias">Criterias</a></li><li class="list-unstyled"><a href="/documentation/error-handling">Error handling</a></li><li class="list-unstyled"><a href="/documentation/error-reporting">Error reporting</a></li><li class="list-unstyled"><a href="/documentation/finally-block">Finally block</a></li><li class="list-unstyled"><a href="/documentation/setup-and-teardown">Setup and teardown</a></li><li class="list-unstyled"><a href="/documentation/running-targets">Running targets</a></li><li class="list-unstyled"><a href="/documentation/script-aliases">Script aliases</a></li></ul>
+</li><li><a href="/addins">Addins</a></li><li><a href="/contribute">Contribute</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
 
         </div>
 
         <!-- Container -->
         <div class="content-container">
           <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
-            <div class="page-header">
-              <h2>Introduction <small></small></h2>
+            <div class="col-sm-12 col-md-8 col-lg-6">
+              <div class="page-header">
+                <h2>Tasks <small></small></h2>
+              </div>
+              <p><ol class="breadcrumb"><li><a href="/documentation/">Documentation</a></li><li>Tasks</li></ol></p>
+              
+                <p><p>Tasks represent a unit of work in Cake, and you use them to perform specific work in a specific order. A task can, for example, also have <a href="/how-does-it-work/tasks/dependencies">dependencies</a>, <a href="/how-does-it-work/tasks/criterias">criterias</a> and <a href="/how-does-it-work/tasks/error-handling">error handling</a> associated to it. </p>
+<p>To define a new task, use the Task-method.</p>
+<pre><code>Task(&quot;A&quot;)
+  .Does(() =&gt;
+{
+});
+</code></pre>
+
+</p>            
             </div>
-            <p></p>
-            <p>
-<h3>What is Cake?</h3>
-
-Cake is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages.
-
-<h3>Goals</h3>
-
-The goal of Cake is to be a first class alternative to those who want to write their build scripts in C# instead of Ruby, F# or Powershell.</p>
           </div>
         </div>
 

@@ -11,7 +11,7 @@
     <link rel="icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 
-    <title>Cake Build - AppVeyor Integration</title>
+    <title>Cake Build - Running targets</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/jumbotron-narrow.css" rel="stylesheet">
@@ -60,70 +60,51 @@
         <!-- Sidebar -->
         <div class="col-sm-3 col-md-3 sidebar">   
           <ul class="nav nav-sidebar">
-<li><a href="/">Welcome to Cake!</a></li><li><a href="/introduction">Introduction</a></li><li><a href="/how-does-it-work">How does it work?</a></li><li><a href="/getting-started">Getting started</a></li><li><a href="/contributors">Contributors</a></li><li><a href="/contribution-guidelines">Contribution guidelines</a></li><li class="active"><a href="/appveyor-integration">AppVeyor Integration</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
+<li><a href="/">Start</a></li><li><a href="/what-is-cake">What is Cake?</a></li><li><a href="/getting-started">Getting started</a></li><li class="active"><a href="/documentation">Documentation</a><ul>
+<li class="list-unstyled"><a href="/documentation/tasks">Tasks</a></li><li class="list-unstyled"><a href="/documentation/dependencies">Dependencies</a></li><li class="list-unstyled"><a href="/documentation/criterias">Criterias</a></li><li class="list-unstyled"><a href="/documentation/error-handling">Error handling</a></li><li class="list-unstyled"><a href="/documentation/error-reporting">Error reporting</a></li><li class="list-unstyled"><a href="/documentation/finally-block">Finally block</a></li><li class="list-unstyled"><a href="/documentation/setup-and-teardown">Setup and teardown</a></li><li class="list-unstyled"><b><a href="/documentation/running-targets">Running targets</a></b></li><li class="list-unstyled"><a href="/documentation/script-aliases">Script aliases</a></li></ul>
+</li><li><a href="/addins">Addins</a></li><li><a href="/contribute">Contribute</a></li><li><a href="/dsl">DSL reference</a></li><li><a href="/api">API reference</a></li></ul>
 
         </div>
 
         <!-- Container -->
         <div class="content-container">
           <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
-            <div class="page-header">
-              <h2>AppVeyor Integration <small></small></h2>
-            </div>
-            <p></p>
-            <p><p>This section will describe how to use Cake with your AppVeyor CI builds.</p>
-<h3>1. Add prerequisites</h3>
-<p>Start by copying <code>NuGet.exe</code> to your tools folder. Cake uses the <code>tools</code> path as a convention for finding stuff it needs such as unit test runners and other tools.</p>
-<ul>
-<li>
-MyProject
-<ul>
-<li>
-tools
-<ul>
-<li>nuget.exe</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3>2. Add build script</h3>
-<p>Add a build script called <code>build.cake</code> to the project root. In this tutorial, we'll just create a really simple build script for demonstration.</p>
-<pre><code>// Get the target.
-var target = Argument&amp;lt;string&amp;gt;(&quot;target&quot;, &quot;Default&quot;);
-
-Task(&quot;Default&quot;)
-  .Does(() =&amp;gt;
+            <div class="col-sm-12 col-md-8 col-lg-6">
+              <div class="page-header">
+                <h2>Running targets <small></small></h2>
+              </div>
+              <p><ol class="breadcrumb"><li><a href="/documentation/">Documentation</a></li><li>Running targets</li></ol></p>
+              
+                <p><p>To run a target, use the <code>RunTarget</code> method. The <code>RunTarget</code> method should be placed at the end of the script.</p>
+<pre><code>Task(&quot;Default&quot;)
+  .Does(() =&gt;
 {
-    Information(&quot;Hello from Cake!&quot;);
+    Information(&quot;Hello World!&quot;);
+});
+
+RunTarget(&quot;Default&quot;);
+</code></pre>
+
+<h3>Passing a target to the script</h3>
+<p>All arguments passed to <code>Cake.exe</code> will also be accesible from the Cake script. You can access the arguments by using the <a href="/dsl/#arguments">argument DSL</a>. </p>
+<pre><code>var target = Argument(&quot;target&quot;, &quot;Build&quot;);
+
+Task(&quot;Build&quot;)
+  .Does(() =&gt;
+{
+});
+
+Task(&quot;Publish&quot;)
+  .IsDependentOn(&quot;Build&quot;)
+  .Does(() =&gt;
+{
 });
 
 RunTarget(target);
 </code></pre>
 
-<h3>3. Add bootstrapper script</h3>
-<p>Create a old fashioned batch file called <code>build.cmd</code> that will download Cake and execute the build script.</p>
-<pre><code>@echo off
-
-:Build
-cls
-
-if not exist tools\Cake\Cake.exe ( 
-    echo Installing Cake...
-    tools\NuGet.exe install Cake -OutputDirectory tools -ExcludeVersion -NonInteractive -Prerelease
-)
-
-echo Starting Cake...
-tools\Cake\Cake.exe build.cake -target=Default -verbosity=diagnostic
-</code></pre>
-
-<h3>4. Configure AppVeyor</h3>
-<p>Now we need to tell AppVeyor how to start the Cake build. Do this by setting the build script for your AppVeyor project to <code>build.cmd</code>. Save your settings and you should be done.</p>
-<p><img src="/images/cake-appveyor-build-settings.png" alt="Settings" /></p>
-<h3>5. Try it out</h3>
-<p>The next triggered build will now execute the Cake build script as expected.</p>
-<p><img src="/images/cake-appveyor-result.png" alt="Result" /></p>
-</p>
+</p>            
+            </div>
           </div>
         </div>
 
